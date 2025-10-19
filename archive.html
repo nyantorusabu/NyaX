@@ -275,7 +275,7 @@
                     <div class="post-header">
                         <a href="index.html#profile/${author.id}" class="post-author" target="_blank">${escapeHTML(author.name)}</a>
                         ${author.admin ? `<img src="/icons/admin.png" class="admin-badge" title="NyaXTeam">` : ''}
-                        ${author.verify ? `<img src="/icons/verify.png" class="verify-badge" title="認証済み">` : ''}
+                        ${author.verify ? `<img src="${author.id === 9271 ? '/icons/rainbow.png' : '/icons/verify.png'}" class="verify-badge" title="認証済み">` : ''}
                         <span class="post-time">#${author.id} · ${new Date(post.time).toLocaleString('ja-JP')}</span>
                     </div>`;
             
