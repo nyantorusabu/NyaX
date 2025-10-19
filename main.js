@@ -1150,7 +1150,7 @@ function openAccountSwitcherModal() {
     authorLink.textContent = displayAuthor.name || '不明'; // 安全なtextContent
     postHeader.appendChild(authorLink);
 
-    // 管理者・認証済みバッジ
+// 管理者・認証済みバッジ
     if (displayAuthor.admin) {
         const adminBadge = document.createElement('img');
         adminBadge.src = 'icons/admin.png';
@@ -1159,7 +1159,14 @@ function openAccountSwitcherModal() {
         authorLink.appendChild(adminBadge);
     } else if (displayAuthor.verify) {
         const verifyBadge = document.createElement('img');
-        verifyBadge.src = 'icons/verify.png';
+        
+        // ★★★ userIdが9271の場合、虹色のバッジを表示する ★★★
+        if (displayAuthor.id === 9271) {
+            verifyBadge.src = 'icons/rainbow.png';
+        } else {
+            verifyBadge.src = 'icons/verify.png';
+        }
+        
         verifyBadge.className = 'verify-badge';
         verifyBadge.title = '認証済み';
         authorLink.appendChild(verifyBadge);
@@ -2157,7 +2164,7 @@ function openAccountSwitcherModal() {
                 <div class="profile-info">
                     <h2>
                         ${escapeHTML(user.name)}
-                        ${user.admin ? `<img src="icons/admin.png" class="admin-badge" title="NyaXTeam">` : (user.verify ? `<img src="icons/verify.png" class="verify-badge" title="認証済み">` : '')}
+                        ${user.admin ? `<img src="icons/admin.png" class="admin-badge" title="NyaXTeam">` : (user.verify ? `<img src="${user.id === 9271 ? 'icons/rainbow.png' : 'icons/verify.png'}" class="verify-badge" title="認証済み">` : '')}
                     </h2>
                     <div class="user-id">#${user.id} ${user.settings.show_scid ? `(@${user.scid})` : ''}</div>
                     <p class="user-me">${userMeHtml}</p>
@@ -2701,9 +2708,9 @@ function openAccountSwitcherModal() {
             userLink.className = 'profile-link';
             userLink.style.cssText = 'display:flex; align-items:center; gap:0.8rem; text-decoration:none; color:inherit;';
 
-            const badgeHTML = u.admin 
+        const badgeHTML = u.admin
                 ? ` <img src="icons/admin.png" class="admin-badge" title="NyaXTeam">`
-                : (u.verify ? ` <img src="icons/verify.png" class="verify-badge" title="認証済み">` : '');
+                : (u.verify ? ` <img src="${u.id === 9271 ? 'icons/rainbow.png' : 'icons/verify.png'}" class="verify-badge" title="認証済み">` : '');
 
             userLink.innerHTML = `
                 <img src="${getUserIconUrl(u)}" style="width:48px; height:48px; border-radius:50%;" alt="${u.name}'s icon">
