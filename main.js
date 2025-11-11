@@ -2768,7 +2768,15 @@ window.addEventListener('DOMContentLoaded', () => {
                     if (showPinPost) {
                         const pinPost = posts.find(p => p.id === options.pinId);
                         if (pinPost) {
-                            const postEl = await renderPost(pinPost, pinPost.author, { replyCountsMap, userCache: allUsersCache, metricsPromise , isPinned: true});
+                            const pinned_metrics_promise = (async () => {
+                                const { data: metricsData } = await supabase.rpc('get_post_metrics', { post_ids: [pinPost.id] }).single();
+                                
+                                replyCountsMap.set(metricsData.post_id, metricsData.reply_count);
+                                pinPost.like = metricsData.like_count;
+                                pinPost.star = metricsData.star_count;
+                                pinPost.repost_count = metricsData.repost_count;
+                            })();
+                            const postEl = await renderPost(pinPost, pinPost.author, { replyCountsMap, userCache: allUsersCache, metricsPromise: pinned_metrics_promise, isPinned: true});
                             if (postEl) currentTrigger.before(postEl);
                             posts = posts.filter(p => p.id !== options.pinId);
                         }
