@@ -1,0 +1,22 @@
+[
+    {
+        "id": "NyaXSupporter",
+        "name": "NyaXサポーター",
+        "description": "NyaXに対して何らかのサポートをした。"
+    },
+    {
+        "id": "WelcomeBadge",
+        "name": "バッジへようこそ!",
+        "description": "すべてのNyaXUserに付与。"
+    },
+    {
+        "id": "SabuBadge",
+        "name": "さぶバッジ",
+        "description": "付与条件は不明。今の所1人にしか付与されていないようだ。"
+    },
+    {
+        "id": "MyBadge",
+        "name": "マイバッジ",
+        "description": "見た目を変更できるスペシャルなバッジ。認証済みユーザーのみ利用可能です。"
+    }
+]

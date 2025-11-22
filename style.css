@@ -592,9 +592,7 @@ img.emoji{
     color: var(--secondary-text-color);
 }
 
-.admin-badge,
-.verify-badge,
-.contributor-badge {
+.user-badge {
     width: 1.2em;
     height: 1.2em;
     vertical-align: text-bottom;

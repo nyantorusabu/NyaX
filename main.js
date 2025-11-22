@@ -353,6 +353,33 @@ window.addEventListener('DOMContentLoaded', () => {
         else return false;
     }
 
+    async function getBadgeHTML(udata) {
+        if (!udata) return;
+        let badge, mainBadge, subBadge;
+        mainBadge = document.createElement('img');
+        mainBadge.className = 'user-badge';
+        subBadge = document.createElement('img');
+        subBadge.className = 'user-badge';
+        if (udata.admin) {
+            mainBadge.title = 'NyaXTeam';
+            mainBadge.src = 'icons/admin.png';
+        } else if ((await contributors).includes(udata.id)) {
+            mainBadge.title = '開発協力者';
+            mainBadge.src = 'icons/contributor.png';
+        } else if (udata.verify) {
+            mainBadge.title = '認証済み';
+            mainBadge.src = 'icons/verify.png';
+        } else {
+            mainBadge = null;
+        }
+
+        if (udata.badge && udata.badgelist.includes(udata.badge)) {
+            subBadge.title // ここで作業中断
+        } else {
+            subBadge = null;
+        }
+    }
+
     // --- 5. ルーティングと画面管理 ---
     async function router() {
         showLoading(true);
