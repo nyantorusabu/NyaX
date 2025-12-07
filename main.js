@@ -52,6 +52,7 @@ window.addEventListener('DOMContentLoaded', () => {
         flag_filled: `<svg viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>`,
         emoji: `<svg viewBox="0,0,17.13786,14.47712" fill="currentColor" stroke="none" stroke-width="0.5" stroke-miterlimit="10"><g transform="translate(-231.43107,-172.76144)"><path d="M239.94712,186.81929c-0.0507,0.41926 -0.49531,0.41927 -0.49531,0.41927c-3.96787,0 -8.01249,-0.68535 -8.02074,-5.61285c0.17537,-2.64023 1.74956,-4.43331 2.70713,-6.82761c0.16543,-0.41362 0.45628,-1.91295 0.94891,-2.02221c1.10065,-0.2441 2.66273,2.67451 2.86873,3.4552c0.31374,0.81649 3.15293,0.99792 3.94628,0.24025c0.52177,-0.4983 0.89896,-3.42207 1.84402,-3.42151c1.12146,0.00067 2.30001,2.5981 2.70772,3.35984c0.28978,1.21395 1.21609,1.24536 1.72418,2.54303c1.5838,4.04503 -1.95067,5.61523 -5.12606,6.89251c-1.04106,0.43359 -1.98213,0.90597 -3.10486,0.97409zM239.12209,186.23762c0.05606,-0.41004 0.49412,-0.41004 0.49412,-0.41004h0.0822c1.08582,0.00791 1.99423,-0.49911 2.97557,-0.90816c0.90613,-0.36021 4.40914,-1.62575 4.69789,-2.51803c0.91767,-2.83576 -1.39409,-3.5574 -1.85281,-5.63655c-0.29134,-0.52115 -1.70912,-2.14942 -1.64872,-2.72273c0.04683,-0.4445 -0.19827,0.87957 -0.39231,1.28221c-0.2529,0.52475 -0.45183,1.48329 -0.88714,1.87204c-1.38878,1.24023 -4.99067,0.88942 -5.58856,-0.66392c-0.06813,-0.293 -1.17064,-1.8955 -1.53788,-2.53236c-0.07769,0.34794 -0.29151,0.90382 -0.39826,1.17066c-0.29222,0.73044 -0.44273,1.50704 -0.74532,2.23256c-0.71976,1.7258 -1.74751,2.12166 -1.89035,4.25572c-0.00851,4.18415 3.41992,4.55867 6.69156,4.57862z"/><path d="M238.45934,181.66821c-0.35355,0.35356 -0.70711,0 -0.70711,0l-0.18648,-0.23974c-0.16632,-0.39918 -0.61694,-1.00924 -0.81966,-1.49844c-0.30124,0.60062 -0.60549,1.16756 -1.03983,1.70125c0,0 -0.31662,0.38698 -0.7036,0.07036c-0.38698,-0.31662 -0.07036,-0.7036 -0.07036,-0.7036c0.45322,-0.55057 0.73715,-1.14917 1.05641,-1.78332l0.14449,-0.46957c0.05931,-0.20994 0.25229,-0.36377 0.48121,-0.36377c0.18932,0 0.35406,0.10521 0.43894,0.26035l0.30916,0.54103l-0.01905,0.01088c0.47079,0.53548 0.82099,1.07173 1.14536,1.85022l-0.02949,-0.08275c0,0 0.35355,0.35356 0,0.70711z"/><path d="M244.58258,181.789c-0.47434,0.15812 -0.63245,-0.31623 -0.63245,-0.31623l-0.08204,-0.24655c-0.7487,-2.49444 -1.20387,-2.36025 -1.86474,0.13877c0,0 -0.12883,0.48311 -0.61194,0.35429c-0.48311,-0.12883 -0.35429,-0.61195 -0.35429,-0.61195c0.13898,-0.51735 0.96019,-3.11558 1.79527,-3.07868c0.83267,0.0368 1.77893,2.22608 1.99149,2.90349l0.07495,0.2244c0,0 0.15811,0.47434 -0.31623,0.63245z"/></g></svg>`,
         nyax_logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,86.03313,99.70458"><g transform="translate(-196.60558,-130.32065)"><g fill="currentColor" stroke="none"><path d="M196.60559,230.02523l0,-70.13795l17.47488,-0.00265l0.02074,39.64497l14.92353,-19.35604l-14.9511,-20.28628l-17.46804,0v-29.56663h18.56125l24.87297,33.70192l24.96791,-33.70192h17.63101l0,29.64857l-17.18324,0l-15.17417,19.90152l15.22948,20.56652l-0.05143,-40.54738l17.17935,0.07934l0,70.05601h-17.47906l-25.25271,-34.55634l-24.3983,34.55634z"/></g></g></svg>`,
+        mask: `<svg viewBox="0 0 10 10" fill="none" stroke="#000000" stroke-width="0.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="4"/><line x1="5" y1="2.5" x2="5" y2="6"/><line x1="5" y1="7.6" x2="5" y2="7.6"/></svg>`,
     };
 
     // --- 3. DOM要素の取得 ---
@@ -924,11 +925,12 @@ window.addEventListener('DOMContentLoaded', () => {
             if (fetchError) throw fetchError;
 
             // content, reply_id, attachments は null を指定
-            const { error: rpcError } = await supabase.rpc('create_post', {
+            const { error: rpcError } = await supabase.rpc('create_post_new', {
                 p_content: null,
                 p_reply_id: null,
                 p_repost_to: postId,
-                p_attachments: null
+                p_attachments: null,
+                p_mask: false
             });
 
             if (rpcError) {
@@ -974,6 +976,9 @@ window.addEventListener('DOMContentLoaded', () => {
                         <input type="file" id="file-input" class="hidden" multiple>
                         <div id="emoji-picker" class="hidden"></div>
                         <button id="post-submit-button" class="float-right">ポスト</button>
+                        <button type="button" class="post-mask-button float-right" title="ワンクッション">
+                            ${ICONS.mask}
+                        </button>
                         <span class="float-clear"></span>
                     </div>
                 </div>
@@ -986,6 +991,7 @@ window.addEventListener('DOMContentLoaded', () => {
             container.querySelector('#file-input').click();
         });
         container.querySelector('#file-input').addEventListener('change', (e) => handleFileSelection(e, container));
+        container.querySelector('.post-mask-button').addEventListener('click', () => handlePostMask(container));
         container.querySelector('#post-submit-button').addEventListener('click', () => handlePostSubmit(container));
         container.querySelector('textarea').addEventListener('keydown', handleCtrlEnter);
     }
@@ -1063,12 +1069,20 @@ window.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    function handlePostMask(container) {
+        const button = container.querySelector('.post-mask-button');
+
+        button.classList.toggle('active');
+    }
     
     async function handlePostSubmit(container) {
         if (!currentUser) return alert("ログインが必要です。");
         const contentEl = container.querySelector('textarea');
         const content = contentEl.value.trim();
         if (!content && selectedFiles.length === 0 && !quotingPost) return alert('内容を入力するか、ファイルを添付してください。');
+
+        const maskActive = container.querySelector('.post-mask-button').classList.contains('active');
 
         const button = container.querySelector('#post-submit-button');
         button.disabled = true;
@@ -1105,11 +1119,12 @@ window.addEventListener('DOMContentLoaded', () => {
             }
 
             // 2. 新しいRPC関数を呼び出してポストをDBに保存
-            const { data: newPost, error: rpcError } = await supabase.rpc('create_post', {
+            const { data: newPost, error: rpcError } = await supabase.rpc('create_post_new', {
                 p_content: content,
                 p_reply_id: replyingTo?.id || null,
                 p_repost_to: quotingPost?.id || null,
-                p_attachments: attachmentsData.length > 0 ? attachmentsData : null
+                p_attachments: attachmentsData.length > 0 ? attachmentsData : null,
+                p_mask: maskActive
             }).single(); // .single()を追加して、返り値が1行であることを期待
 
             // 3. RPCでエラーが発生したら、ファイルを削除して処理を中断
@@ -1460,15 +1475,41 @@ window.addEventListener('DOMContentLoaded', () => {
         if (post.content) {
             const postContent = document.createElement('div');
             postContent.className = 'post-content';
-            // 唯一のinnerHTML使用箇所。必ずサニタイズ済みの結果を渡す
-            postContent.innerHTML = formatPostContent(post.content, userCache);
+            
+            // maskが有効の場合contentをhidden化&頭に!があればそれだけ表示
+            if (post.mask) {
+                postContent.classList.add('hidden');
+                if (post.content.startsWith('!')) {
+                    const masktitle = document.createElement('div');
+                    masktitle.className = 'post-content post-mask-title';
+                    masktitle.innerHTML = formatPostContent(post.content.split('\n')[0].slice(1), userCache);
+                    postMain.appendChild(masktitle);
+                    postContent.innerHTML = formatPostContent(post.content.slice(1), userCache);
+                } else {
+                    postContent.innerHTML = formatPostContent(post.content, userCache);
+                }
+            } else {
+                postContent.innerHTML = formatPostContent(post.content, userCache);
+            }
             postMain.appendChild(postContent);
+        }
+        
+        // maskが有効の場合表示ボタンを追加
+        if (post.mask) {
+            const postAlert = document.createElement('button');
+            postAlert.className = 'post-mask-alert';
+            postAlert.innerText = 'このポストにはワンクッションが付与されています'
+            postMain.appendChild(postAlert)
         }
 
         // 添付ファイル
         if (post.attachments && post.attachments.length > 0) {
             const attachmentsContainer = document.createElement('div');
             attachmentsContainer.className = 'attachments-container';
+            // maskが有効の場合attachmentsもhidden化
+            if (post.mask) {
+                attachmentsContainer.classList.add('hidden');
+            }
             if (isNested) {
                 const itemDiv = document.createElement('div');
                 itemDiv.className = 'attachment-item';
@@ -3431,6 +3472,23 @@ window.addEventListener('DOMContentLoaded', () => {
             button.disabled = false;
         }
     };
+    window.handleShowMaskedPost = async (button) => {
+        button.disabled = true;
+
+        const postMain = button.parentElement;
+        const postMaskTitle = postMain.querySelector('.post-mask-title');
+
+        if (postMaskTitle) postMaskTitle.remove();
+        button.remove();
+
+        const postContent = postMain.querySelector('.post-content');
+        const postAttach = postMain.querySelector('.attachments-container');
+
+        if (postAttach) postAttach.classList.remove('hidden');
+        if (postContent) postContent.classList.remove('hidden');
+        
+        
+    };
     window.handleFollowToggle = async (targetUserId, button) => {
         if (!currentUser) return alert("ログインが必要です。");
         button.disabled = true;
@@ -3466,7 +3524,7 @@ window.addEventListener('DOMContentLoaded', () => {
     async function openEditPostModal(postId) {
         showLoading(true);
         try {
-            const { data: post, error } = await supabase.from('post').select('content, attachments').eq('id', postId).single();
+            const { data: post, error } = await supabase.from('post').select('content, mask,  attachments').eq('id', postId).single();
             if (error || !post) throw new Error('ポスト情報の取得に失敗しました。');
             
             let currentAttachments = post.attachments || [];
@@ -3513,6 +3571,7 @@ window.addEventListener('DOMContentLoaded', () => {
                             <input type="file" id="edit-file-input" class="hidden" multiple>
                             <div id="emoji-picker" class="hidden"></div>
                             <button id="update-post-button" style="padding: 0.5rem 1.5rem; border-radius: 9999px; border: none; background-color: var(--primary-color); color: white; font-weight: 700; margin-left: auto;" class="float-right">保存</button>
+                            <button type="button" class="post-mask-button float-right ${post.mask ? 'active' : ''}" title="ワンクッション">${ICONS.mask}</button>
                             <span class="float-clear"></span>
                         </div>
                     </div>
@@ -3523,6 +3582,13 @@ window.addEventListener('DOMContentLoaded', () => {
             
             DOM.editPostModal.querySelector('#update-post-button').onclick = () => handleUpdatePost(postId, currentAttachments, filesToAdd, Array.from(filesToDelete));
             DOM.editPostModal.querySelector('.modal-close-btn').onclick = () => DOM.editPostModal.classList.add('hidden');
+
+            DOM.editPostModal.addEventListener('keydown', (e) => {
+                if (e.ctrlKey && e.key === 'Enter') {
+                    e.preventDefault();
+                    DOM.editPostModal.querySelector('#update-post-button').click();
+                }
+            });
             
             DOM.editPostModal.querySelector('.attachment-button').onclick = () => {
                 DOM.editPostModal.querySelector('#edit-file-input').click();
@@ -3532,6 +3598,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 filesToAdd.push(...Array.from(e.target.files));
                 updatePreview();
             };
+
+            DOM.editPostModal.querySelector('.post-mask-button').onclick = () => {
+                DOM.editPostModal.querySelector('.post-mask-button').classList.toggle('active');
+            }
 
             DOM.editPostModal.querySelector('.file-preview-container').onclick = (e) => {
                 if (e.target.classList.contains('file-preview-remove')) {
@@ -3810,15 +3880,10 @@ window.addEventListener('DOMContentLoaded', () => {
 
     async function handleUpdatePost(postId, originalAttachments, filesToAdd, filesToDeleteIds) {
         const newContent = DOM.editPostModal.querySelector('#edit-post-textarea').value.trim();
+        const maskActive = DOM.editPostModal.querySelector('.post-mask-button').classList.contains('active');
         const editPostTextarea = DOM.editPostModal.querySelector('#edit-post-textarea');
         if (!newContent) return alert('内容を入力するか、ファイルを添付してください。');
         
-        editPostTextarea.addEventListener('keydown', (e) => {
-            if (e.ctrlKey && e.key === 'Enter') {
-                e.preventDefault();
-                handleUpdatePost(postId, originalAttachments, filesToAdd, filesToDeleteIds);
-            }
-        });
         const button = DOM.editPostModal.querySelector('#update-post-button');
         button.disabled = true; button.textContent = '保存中...';
         showLoading(true);
@@ -3844,7 +3909,7 @@ window.addEventListener('DOMContentLoaded', () => {
             finalAttachments.push(...newUploadedAttachments);
 
             // 4. ポスト情報をDBで更新
-            const { error: postUpdateError } = await supabase.from('post').update({ content: newContent, attachments: finalAttachments.length > 0 ? finalAttachments : null }).eq('id', postId);
+            const { error: postUpdateError } = await supabase.from('post').update({ content: newContent, attachments: finalAttachments.length > 0 ? finalAttachments : null, mask: maskActive }).eq('id', postId);
             if (postUpdateError) throw postUpdateError;
             
             DOM.editPostModal.classList.add('hidden');
@@ -4465,6 +4530,10 @@ window.addEventListener('DOMContentLoaded', () => {
                 });
                 return;
             }
+
+            const postAlertButton = target.closest('.post-mask-alert');
+            if (postAlertButton) { window.handleShowMaskedPost(postAlertButton); return; }
+
             if (!target.closest('a') && !target.closest('.post-menu-btn') && !target.closest('.attachment-item')) {
                 window.location.hash = `#post/${actionTargetPostId}`;
                 return;

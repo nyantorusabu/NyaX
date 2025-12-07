@@ -149,43 +149,98 @@
         
         async function loadMyRanks(session) {
             const myRanksSection = document.getElementById('my-ranks-section');
+            
+            // ログインしていない場合は非表示にして終了
             if (!session) {
                 myRanksSection.style.display = 'none';
                 return;
             }
-            
-            const { data: user } = await supabase.from('user').select('id').eq('uuid', session.user.id).single();
-            if (!user) {
+        
+            // ユーザーID取得
+            const { data: user, error: userError } = await supabase
+                .from('user')
+                .select('id')
+                .eq('uuid', session.user.id)
+                .single();
+        
+            if (userError || !user) {
                 myRanksSection.style.display = 'none';
                 return;
             }
-            
+        
             myRanksSection.style.display = 'block';
-
-            const [
-                {data: myFollower}, {data: myPost}, {data: myLike}, {data: myStar}
-            ] = await Promise.all([
-                supabase.rpc('get_my_follower_rank', { p_user_id: user.id }).single(),
-                supabase.rpc('get_my_post_count_rank', { p_user_id: user.id }).single(),
-                supabase.rpc('get_my_like_received_rank', { p_user_id: user.id }).single(),
-                supabase.rpc('get_my_star_received_rank', { p_user_id: user.id }).single()
-            ]);
-            
-            document.getElementById('my-follower-rank').textContent = myFollower ? `${myFollower.rank}位 (${myFollower.follower_count})` : 'ランク外';
-            document.getElementById('my-post-rank').textContent = myPost ? `${myPost.rank}位 (${myPost.post_count})` : 'ランク外';
-            document.getElementById('my-like-rank').textContent = myLike ? `${myLike.rank}位 (${myLike.like_count})` : 'ランク外';
-            document.getElementById('my-star-rank').textContent = myStar ? `${myStar.rank}位 (${myStar.star_count})` : 'ランク外';
+        
+            // 各要素に「読み込み中…」を入れておくと親切
+            const setLoading = (id) => {
+                document.getElementById(id).textContent = '読み込み中…';
+            };
+        
+            setLoading('my-follower-rank');
+            setLoading('my-post-rank');
+            setLoading('my-like-rank');
+            setLoading('my-star-rank');
+        
+            // 1つずつ取得 → 取得完了と同時に即反映
+            try {
+                const { data: myFollower, error } = await supabase
+                    .rpc('get_my_follower_rank', { p_user_id: user.id })
+                    .single();
+                if (error) throw error;
+                document.getElementById('my-follower-rank').textContent = 
+                    myFollower ? `${myFollower.rank}位 (${myFollower.follower_count})` : 'ランク外';
+            } catch (e) {
+                document.getElementById('my-follower-rank').textContent = '取得失敗';
+                console.error('フォロワー数ランクの取得に失敗: ', e);
+            }
+        
+            try {
+                const { data: myPost, error } = await supabase
+                    .rpc('get_my_post_count_rank', { p_user_id: user.id })
+                    .single();
+                if (error) throw error;
+                document.getElementById('my-post-rank').textContent = 
+                    myPost ? `${myPost.rank}位 (${myPost.post_count})` : 'ランク外';
+            } catch (e) {
+                document.getElementById('my-post-rank').textContent = '取得失敗';
+                console.error('ポスト数ランクの取得に失敗: ', e);
+            }
+        
+            try {
+                const { data: myLike, error } = await supabase
+                    .rpc('get_my_like_received_rank', { p_user_id: user.id })
+                    .single();
+                if (error) throw error;
+                document.getElementById('my-like-rank').textContent = 
+                    myLike ? `${myLike.rank}位 (${myLike.like_count})` : 'ランク外';
+            } catch (e) {
+                document.getElementById('my-like-rank').textContent = '取得失敗';
+                console.error('獲得いいね数ランクの取得に失敗: ', e);
+            }
+        
+            try {
+                const { data: myStar, error } = await supabase
+                    .rpc('get_my_star_received_rank', { p_user_id: user.id })
+                    .single();
+                if (error) throw error;
+                document.getElementById('my-star-rank').textContent = 
+                    myStar ? `${myStar.rank}位 (${myStar.star_count})` : 'ランク外';
+            } catch (e) {
+                document.getElementById('my-star-rank').textContent = '取得失敗';
+                console.error('獲得スター数ランクの取得に失敗: ', e);
+            }
         }
 
-        // [最重要修正点] onAuthStateChangeを使用して、認証状態の確定を待つ
         document.addEventListener('DOMContentLoaded', () => {
             // 公開ランキングはすぐに読み込み開始
             loadRanking('followers');
 
             // 認証状態の変更を監視し、確定したら個人の順位を取得
-            supabase.auth.onAuthStateChange((event, session) => {
-                loadMyRanks(session);
-            });
+            const { data: { subscription: unsubscribeAuth } } = supabase.auth.onAuthStateChange(
+                (event, session) => {
+                    loadMyRanks(session);
+                    unsubscribeAuth.unsubscribe();
+                }
+            );
 
             // タブのクリックイベント
             rankTabs.addEventListener('click', (e) => {

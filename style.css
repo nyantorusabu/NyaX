@@ -552,15 +552,13 @@ img.emoji{
     justify-content: space-between;
     align-items: center;
     padding-top: 0.5rem;
-    width:100%
+    width: 100%
 }
 
-.post-form-actions button {
+.post-form-actions button{
     padding: 0.5rem 1rem;
     border-radius: 9999px;
     border: none;
-    background-color: var(--primary-color);
-    color: white;
     font-weight: 700;
     cursor: pointer;
 }
@@ -570,32 +568,55 @@ img.emoji{
     cursor: not-allowed;
 }
 
-.attachment-button, .emoji-pic-button {
-    background: none !important;
+.post-form-actions #post-submit-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.post-form-actions #post-submit-button:hover {
+    background-color: var(--primary-hover-color);
+}
+
+.attachment-button,
+.emoji-pic-button,
+.post-mask-button {
+    background: none;
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    color: var(--text-color) !important;
+    color: var(--text-color);
     line-height: 1;
     border-radius: 50%;
     transition: background-color 0.2s;
 }
 
-.attachment-button:hover, .emoji-pic-button:hover {
+.attachment-button:hover,
+.emoji-pic-button:hover,
+.post-mask-button:hover {
     background-color: var(--bg-color);
 }
 
-.attachment-button svg {
+.post-form-actions svg {
     width: 20px;
     height: 20px;
-    stroke: currentColor;
+}
+
+.attachment-button svg {
+    stroke: var(--text-color);
     fill: none;
 }
+
 .emoji-pic-button svg {
-    width: 20px;
-    height: 20px;
     stroke: none;
-    fill: currentColor;
+    fill: var(--text-color);
+}
+
+.post-mask-button svg {
+    stroke: var(--text-color);
+}
+
+.post-mask-button.active svg {
+    stroke: var(--primary-color);
 }
 
 .float-left {
@@ -832,6 +853,10 @@ em-emoji-picker {
     line-break: anywhere;
     font-size: 1rem;
     cursor: pointer;
+}
+
+.post-content.post-mask-title {
+    margin-bottom: auto;
 }
 
 .user-me {
@@ -2481,6 +2506,22 @@ body.dark .profile-follow-button {
 .account-switcher-item:not(.active):hover {
     background: #f0f0f0;
     cursor: pointer;
+}
+/* ワンクッション */
+.post-mask-alert {
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition: background-color 0.2s, border-color 0.2s;
+    margin-right: 0.5rem;
+}
+.post-mask-alert:hover {
+    background-color: var(--light-primary-color);
+    border-color: var(--primary-color);
 }
 
 /* レスポンシブ */
