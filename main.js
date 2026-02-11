@@ -709,6 +709,7 @@ window.addEventListener('DOMContentLoaded', () => {
 			{ name: '申請フォーム', link: 'forms' },
 			{ name: 'Emoji一覧', link: 'emoji' },
 			{ name: 'Discord鯖', link: 'discord' },
+			{ name: 'TrustRankについて', link: 'https://scratch.mit.edu/projects/1277088658/' }
 		];
 
 		if (error || !data || data.length === 0) {
@@ -742,12 +743,17 @@ window.addEventListener('DOMContentLoaded', () => {
 			});
 
 		DOM.rightSidebar.links.innerHTML = linkItems
-			.map((item) => {
-				return `
-            <a href="/${item.link}" class="link">${item.name}</a>
-            `;
-			})
-			.join('');
+			  .map(item => `
+			    <a
+			      href="${item.link.startsWith('http') ? item.link : `/${item.link}`}"
+			      class="link"
+			      ${item.link.startsWith('http') ? 'target="_blank" rel="noopener noreferrer"' : ''}
+			    >
+			      ${item.name}
+			    </a>
+			  `)
+			  .join('');
+
 	}
 
 	async function updateNavAndSidebars() {
