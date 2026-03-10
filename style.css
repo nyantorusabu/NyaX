@@ -2,1040 +2,1040 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji:wght@400&display=swap');
 
 :root {
-	/* 共通色設定 */
-	--primary-color: #1d9bf0;
-	--primary-hover-color: #1a8cd8;
-	--like-color: #f91880;
-	--star-color: #ffad1f;
-	/* ライトモード(デフォルト)色設定 */
-	--l-border-color: #eff3f4;
-	--l-bg-color: #f9f9f9;
-	--l-main-bg-color: white;
-	--l-ad-bg-color: #f7f9f9;
-	--l-pg-bg-color: rgba(255, 255, 255, 0.85); /* ページヘッダーなど */
-	--l-emoji-bg-color: none;
-	--l-notification-bg-color: #e8f5fd;
-	--l-text-color: #0f1419;
-	--l-secondary-text-color: #536471;
-	--l-logo-color: black; /* ロゴ表示用に使っているが背景色と真逆の色を使う時に指定されることもある */
-	--l-loading-color: rgba(255, 255, 255, 0.7);
-	--l-widget-bg-color: #e7e8e8; /* プロフィールカードホバー時 */
-	--l-emoji-mart: 255, 255, 255;
-	--l-bw: #000000;
-	--l-spin: rgba(0, 0, 0, 0.1);
-	--l-light-primary-color: #cce6ff;
-	--l-danger-color: #fef0f4;
-	/* ダークモード色設定 */
-	--d-border-color: #2F363D;
-	--d-bg-color: #18191D;
-	--d-main-bg-color: #1C1D21;
-	--d-ad-bg-color: #272929;
-	--d-pg-bg-color: rgb(33 35 41 / 85%); /* ページヘッダーなど */
-	--d-emoji-bg-color: #e8eaed; /* 絵文字の後ろに表示するための白背景　*/
-	--d-notification-bg-color: #073450;
-	--d-text-color: #ffffff;
-	--d-secondary-text-color: #ffffff;
-	--d-logo-color: #ffffff; /* ロゴ表示用に使っているが背景色と真逆の色を使う時に指定されることもある */
-	--d-loading-color: rgba(0, 0, 0, 0.7);
-	--d-widget-bg-color: #4d5156; /* プロフィールカードホバー時 */
-	--d-emoji-mart: 40, 40, 40;
-	--d-bw: #ffffff;
-	--d-spin: rgba(255, 255, 255, 0.1);
-	--d-light-primary-color: #004a8f;
-	--d-danger-color: #610525;
+    /* 共通色設定 */
+    --primary-color: #1d9bf0;
+    --primary-hover-color: #1a8cd8;
+    --like-color: #f91880;
+    --star-color: #ffad1f;
+    /* ライトモード(デフォルト)色設定 */
+    --l-border-color: #eff3f4;
+    --l-bg-color: #f9f9f9;
+    --l-main-bg-color: white;
+    --l-ad-bg-color: #f7f9f9;
+    --l-pg-bg-color: rgba(255, 255, 255, 0.85); /* ページヘッダーなど */
+    --l-emoji-bg-color: none;
+    --l-notification-bg-color: #e8f5fd;
+    --l-text-color: #0f1419;
+    --l-secondary-text-color: #536471;
+    --l-logo-color: black; /* ロゴ表示用に使っているが背景色と真逆の色を使う時に指定されることもある */
+    --l-loading-color: rgba(255, 255, 255, 0.7);
+    --l-widget-bg-color: #e7e8e8; /* プロフィールカードホバー時 */
+    --l-emoji-mart: 255, 255, 255;
+    --l-bw: #000000;
+    --l-spin: rgba(0, 0, 0, 0.1);
+    --l-light-primary-color: #cce6ff;
+    --l-danger-color: #fef0f4;
+    /* ダークモード色設定 */
+    --d-border-color: #2F363D;
+    --d-bg-color: #18191D;
+    --d-main-bg-color: #1C1D21;
+    --d-ad-bg-color: #272929;
+    --d-pg-bg-color: rgb(33 35 41 / 85%); /* ページヘッダーなど */
+    --d-emoji-bg-color: #e8eaed; /* 絵文字の後ろに表示するための白背景　*/
+    --d-notification-bg-color: #073450;
+    --d-text-color: #ffffff;
+    --d-secondary-text-color: #ffffff;
+    --d-logo-color: #ffffff; /* ロゴ表示用に使っているが背景色と真逆の色を使う時に指定されることもある */
+    --d-loading-color: rgba(0, 0, 0, 0.7);
+    --d-widget-bg-color: #4d5156; /* プロフィールカードホバー時 */
+    --d-emoji-mart: 40, 40, 40;
+    --d-bw: #ffffff;
+    --d-spin: rgba(255, 255, 255, 0.1);
+    --d-light-primary-color: #004a8f;
+    --d-danger-color: #610525;
 }
 
 /* 変数指定(クラスはJSにて付与) */
 body.light {
-	--border-color: var(--l-border-color);
-	--bg-color: var(--l-bg-color);
-	--main-bg-color: var(--l-main-bg-color);
-	--ad-bg-color: var(--l-ad-bg-color);
-	--pg-bg-color: var(--l-pg-bg-color);
-	--emoji-bg-color: var(--l-emoji-bg-color);
-	--notification-bg-color: var(--l-notification-bg-color);
-	--text-color: var(--l-text-color);
-	--secondary-text-color: var(--l-secondary-text-color);
-	--logo-color: var(--l-logo-color);
-	--loading-color: var(--l-loading-color);
-	--widget-bg-color: var(--l-widget-bg-color);
-	--emoji-mart: var(--l-emoji-mart);
-	--bw: var(--l-bw);
-	--spin: var(--l-spin);
-	--light-primary-color: var(--l-light-primary-color);
-	--danger-color: var(--l-danger-color);
+    --border-color: var(--l-border-color);
+    --bg-color: var(--l-bg-color);
+    --main-bg-color: var(--l-main-bg-color);
+    --ad-bg-color: var(--l-ad-bg-color);
+    --pg-bg-color: var(--l-pg-bg-color);
+    --emoji-bg-color: var(--l-emoji-bg-color);
+    --notification-bg-color: var(--l-notification-bg-color);
+    --text-color: var(--l-text-color);
+    --secondary-text-color: var(--l-secondary-text-color);
+    --logo-color: var(--l-logo-color);
+    --loading-color: var(--l-loading-color);
+    --widget-bg-color: var(--l-widget-bg-color);
+    --emoji-mart: var(--l-emoji-mart);
+    --bw: var(--l-bw);
+    --spin: var(--l-spin);
+    --light-primary-color: var(--l-light-primary-color);
+    --danger-color: var(--l-danger-color);
 }
 body.dark {
-	--border-color: var(--d-border-color);
-	--bg-color: var(--d-bg-color);
-	--main-bg-color: var(--d-main-bg-color);
-	--ad-bg-color: var(--d-ad-bg-color);
-	--pg-bg-color: var(--d-pg-bg-color);
-	--emoji-bg-color: var(--d-emoji-bg-color);
-	--notification-bg-color: var(--d-notification-bg-color);
-	--text-color: var(--d-text-color);
-	--secondary-text-color: var(--d-secondary-text-color);
-	--logo-color: var(--d-logo-color);
-	--loading-color: var(--d-loading-color);
-	--widget-bg-color: var(--d-widget-bg-color);
-	--emoji-mart: var(--d-emoji-mart);
-	--bw: var(--d-bw);
-	--spin: var(--d-spin);
-	--light-primary-color: var(--d-light-primary-color);
-	--danger-color: var(--d-danger-color);
+    --border-color: var(--d-border-color);
+    --bg-color: var(--d-bg-color);
+    --main-bg-color: var(--d-main-bg-color);
+    --ad-bg-color: var(--d-ad-bg-color);
+    --pg-bg-color: var(--d-pg-bg-color);
+    --emoji-bg-color: var(--d-emoji-bg-color);
+    --notification-bg-color: var(--d-notification-bg-color);
+    --text-color: var(--d-text-color);
+    --secondary-text-color: var(--d-secondary-text-color);
+    --logo-color: var(--d-logo-color);
+    --loading-color: var(--d-loading-color);
+    --widget-bg-color: var(--d-widget-bg-color);
+    --emoji-mart: var(--d-emoji-mart);
+    --bw: var(--d-bw);
+    --spin: var(--d-spin);
+    --light-primary-color: var(--d-light-primary-color);
+    --danger-color: var(--d-danger-color);
 }
 /* 変数指定終わり */
 
 body {
-	font-family:
-		'Noto Sans JP',
-		-apple-system,
-		BlinkMacSystemFont,
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif;
-	margin: 0;
-	background-color: var(--main-bg-color);
-	color: var(--text-color);
+    font-family:
+        'Noto Sans JP',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+    margin: 0;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
 }
 
 /* 入力欄のフォントをNoto Sans JPに統一 */
 input,
 textarea {
-	font-family:
-		'Noto Sans JP',
-		-apple-system,
-		BlinkMacSystemFont,
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif;
+    font-family:
+        'Noto Sans JP',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 
 .app-container {
-	display: flex;
-	margin: 0 auto;
-	min-height: 100vh;
+    display: flex;
+    margin: 0 auto;
+    min-height: 100vh;
 }
 
 .hidden {
-	display: none !important;
+    display: none !important;
 }
 
 /* 左側ナビゲーション */
 #left-nav {
-	position: sticky;
-	top: 0;
-	height: 100vh;
-	width: 275px;
-	padding: 0 1rem;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: column;
-	/*justify-content: space-between;*/
-	flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 275px;
+    padding: 0 1rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    flex-shrink: 0;
 }
 
 .nav-logo-img {
-	color: var(--logo-color);
+    color: var(--logo-color);
 }
 
 .nav-logo-img svg {
-	fill: var(--logo-color) !important;
-	stroke: var(--logo-color) !important;
+    fill: var(--logo-color) !important;
+    stroke: var(--logo-color) !important;
 }
 
 #nav-menu-top {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
 }
 
 .nav-item {
-	display: flex;
-	align-items: center;
-	gap: 1.2rem;
-	padding: 0.75rem;
-	font-size: 1.25rem;
-	font-weight: 400;
-	text-decoration: none;
-	color: var(--text-color);
-	border-radius: 9999px;
-	cursor: pointer;
-	background: none;
-	border: none;
-	text-align: left;
-	transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 9999px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    text-align: left;
+    transition: background-color 0.2s;
 }
 
 #nav-logo {
-	padding: 1rem;
-	display: flex;
-	margin-bottom: 0px;
+    padding: 1rem;
+    display: flex;
+    margin-bottom: 0px;
 }
 
 .nav-logo-img {
-	width: 1.8rem;
+    width: 1.8rem;
 }
 
 /* アイコンとバッジを囲むコンテナ */
 .nav-item-icon-container {
-	position: relative; /* バッジの位置の基準 */
-	display: flex; /* 中の要素をflexで制御 */
-	align-items: center;
-	justify-content: center;
-	/* アイコンのサイズに合わせる */
-	width: 1.75rem;
-	height: 1.75rem;
+    position: relative; /* バッジの位置の基準 */
+    display: flex; /* 中の要素をflexで制御 */
+    align-items: center;
+    justify-content: center;
+    /* アイコンのサイズに合わせる */
+    width: 1.75rem;
+    height: 1.75rem;
 }
 
 .nav-item svg {
-	width: 100%; /* コンテナいっぱいに広がる */
-	height: 100%;
-	fill: none;
-	stroke: currentColor;
-	stroke-width: 2;
-	transition:
-		stroke-width 0.2s,
-		fill 0.2s;
+    width: 100%; /* コンテナいっぱいに広がる */
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition:
+        stroke-width 0.2s,
+        fill 0.2s;
 }
 
 .nav-item:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 .nav-item.active {
-	font-weight: 700;
+    font-weight: 700;
 }
 .nav-item.active svg {
-	fill: none;
-	stroke-width: 2.5;
+    fill: none;
+    stroke-width: 2.5;
 }
 .nav-item[href='#'].active svg path {
-	fill: currentColor;
-	stroke: none;
+    fill: currentColor;
+    stroke: none;
 }
 .nav-item[href='#'].active svg rect {
-	fill: white;
-	stroke: none;
+    fill: white;
+    stroke: none;
 }
 .nav-item[href='#explore'].active svg,
 .nav-item[href^='#dm'].active svg {
-	stroke-width: 2.5;
+    stroke-width: 2.5;
 }
 .nav-item.active:not([href='#']):not([href='#explore']):not([href^='#dm']) svg {
-	fill: currentColor;
-	stroke: none;
+    fill: currentColor;
+    stroke: none;
 }
 .nav-item[href='#settings'].active svg circle {
-	stroke: none;
+    stroke: none;
 }
 @media (prefers-color-scheme: dark) {
-	.nav-item[href='#settings'].active svg circle {
-		fill: black;
-	}
+    .nav-item[href='#settings'].active svg circle {
+        fill: black;
+    }
 }
 body.light .nav-item[href='#settings'].active svg circle {
-	fill: white;
+    fill: white;
 }
 body.dark .nav-item[href='#settings'].active svg circle {
-	fill: black;
+    fill: black;
 }
 .nav-item-post {
-	background-color: var(--primary-color);
-	color: white;
-	width: 90%;
-	justify-content: center;
-	font-size: 1.1rem;
-	font-weight: 700;
-	padding: 1rem;
-	margin-top: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    width: 90%;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 
 .nav-item-post:hover {
-	background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
 }
 
 .nav-item-post .nav-item-icon {
-	display: none; /* デフォルトではアイコンを非表示 */
+    display: none; /* デフォルトではアイコンを非表示 */
 }
 
 #nav-menu-bottom {
-	padding-bottom: 1rem;
-	margin-top: auto;
+    padding-bottom: 1rem;
+    margin-top: auto;
 }
 
 .account-button {
-	width: 100%;
-	font-size: 1rem;
-	justify-content: flex-start;
-	gap: 0.8rem;
+    width: 100%;
+    font-size: 1rem;
+    justify-content: flex-start;
+    gap: 0.8rem;
 }
 .account-button img {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
 }
 .account-info {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .account-info .name {
-	font-weight: 700;
+    font-weight: 700;
 }
 .account-info .id {
-	color: var(--secondary-text-color);
+    color: var(--secondary-text-color);
 }
 #login-button {
-	width: 100%;
-	justify-content: center;
-	background-color: var(--primary-color);
-	color: white;
-	font-weight: 700;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
 }
 
 .notification-badge {
-	background-color: var(--primary-color);
-	color: white;
-	font-size: 0.7rem;
-	font-weight: bold;
-	border-radius: 50%;
-	width: 1.5em;
-	height: 1.5em;
-	line-height: 1.5em;
-	text-align: center;
-	position: absolute;
-	z-index: 1;
-	/* アイコンコンテナの右上隅に配置する鉄板の指定方法 */
-	top: 0;
-	right: 0;
-	/* バッジが少しはみ出すように微調整 */
-	transform: translate(25%, -25%);
-	/* 親要素のクリックを妨げないようにする */
-	pointer-events: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+    /* アイコンコンテナの右上隅に配置する鉄板の指定方法 */
+    top: 0;
+    right: 0;
+    /* バッジが少しはみ出すように微調整 */
+    transform: translate(25%, -25%);
+    /* 親要素のクリックを妨げないようにする */
+    pointer-events: none;
 }
 
 .nav-item[href='#notifications'] {
-	position: relative;
+    position: relative;
 }
 
 /* 中央メインコンテンツ */
 #main-content {
-	flex-grow: 1; /* 利用可能なスペースを埋めるように広がる */
-	flex-shrink: 1; /* スペースが足りない場合に縮むことを許可 */
-	min-width: 0; /* flexアイテムがコンテンツ幅以下に縮むための定石 */
-	border-left: 1px solid var(--border-color);
-	border-right: 1px solid var(--border-color);
+    flex-grow: 1; /* 利用可能なスペースを埋めるように広がる */
+    flex-shrink: 1; /* スペースが足りない場合に縮むことを許可 */
+    min-width: 0; /* flexアイテムがコンテンツ幅以下に縮むための定石 */
+    border-left: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
 }
 
 #page-header {
-	position: sticky;
-	top: 0;
-	background-color: var(--pg-bg-color);
-	backdrop-filter: blur(12px);
-	padding: 1rem;
-	border-bottom: 1px solid var(--border-color);
-	z-index: 10;
+    position: sticky;
+    top: 0;
+    background-color: var(--pg-bg-color);
+    backdrop-filter: blur(12px);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 10;
 }
 
 /* Emoji Oneの画像設定 */
 img.emojione {
-	width: 1.1rem;
-	height: auto;
+    width: 1.1rem;
+    height: auto;
 }
 
 /* Twemojiの画像設定 */
 img.emoji {
-	display: inline-block;
-	width: 1.1rem;
-	height: auto;
-	padding-right: 1px;
+    display: inline-block;
+    width: 1.1rem;
+    height: auto;
+    padding-right: 1px;
 }
 
 /* JSでつけるNoto Color Emoji用設定 */
 .notocoloremoji {
-	font-family:
-		'Noto Sans JP',
-		'Noto Color Emoji',
-		-apple-system,
-		BlinkMacSystemFont,
-		'Segoe UI',
-		Roboto,
-		Helvetica,
-		Arial,
-		sans-serif;
+    font-family:
+        'Noto Sans JP',
+        'Noto Color Emoji',
+        -apple-system,
+        BlinkMacSystemFont,
+        'Segoe UI',
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
 }
 
 .nyax-emoji {
-	background-color: var(--emoji-bg-color);
+    background-color: var(--emoji-bg-color);
 }
 
 .header-with-back-button {
-	display: flex;
-	align-items: center;
-	gap: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
 
 .header-back-btn {
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 0.5rem;
-	border-radius: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .header-back-btn:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 .header-back-btn svg {
-	width: 20px;
-	height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 #page-header h2 {
-	margin: 0;
-	font-size: 1.25rem;
+    margin: 0;
+    font-size: 1.25rem;
 }
 
 .header-search-bar {
-	display: flex;
-	align-items: center;
-	background-color: var(--bg-color);
-	border-radius: 9999px;
-	padding: 0.5rem 1rem;
-	gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color);
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
 }
 
 .header-search-bar svg {
-	flex-shrink: 0;
-	width: 20px;
-	height: 20px;
-	fill: none;
-	stroke: var(--secondary-text-color);
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--secondary-text-color);
 }
 
 /* fillをnoneに、strokeを設定 */
 .header-search-bar input {
-	flex-grow: 1;
-	border: none;
-	background: transparent;
-	outline: none;
-	font-size: 1rem;
-	color: var(--text-color);
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 #sidebar-search-input {
-	width: 100%;
+    width: 100%;
 }
 
 /* ヘッダー内のタイトルとボタンを両端揃えにするためのコンテナ */
 .header-with-action-button {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 /* ヘッダー右上のアクションボタンのスタイル */
 .header-action-btn {
-	padding: 0.5rem 1rem;
-	border-radius: 9999px;
-	border: 1px solid var(--text-color); /* 黒い枠線 */
-	background: var(--main-bg-color);
-	color: var(--text-color); /* 黒い文字 */
-	font-weight: 700;
-	cursor: pointer;
-	transition: background-color 0.2s;
-	flex-shrink: 0; /* ボタンが縮まないようにする */
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid var(--text-color); /* 黒い枠線 */
+    background: var(--main-bg-color);
+    color: var(--text-color); /* 黒い文字 */
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    flex-shrink: 0; /* ボタンが縮まないようにする */
 }
 
 .header-action-btn:hover {
-	background-color: var(--bg-color); /* ホバー時に薄いグレーに */
+    background-color: var(--bg-color); /* ホバー時に薄いグレーに */
 }
 
 .timeline-tabs-sticky-container {
-	position: sticky;
-	top: 56px;
-	background-color: var(--pg-bg-color);
-	backdrop-filter: blur(12px);
-	z-index: 9;
-	border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 56px;
+    background-color: var(--pg-bg-color);
+    backdrop-filter: blur(12px);
+    z-index: 9;
+    border-bottom: 1px solid var(--border-color);
 }
 .timeline-tabs {
-	display: flex;
+    display: flex;
 }
 .post-form-sticky-container {
-	background-color: var(
-		--main-bg-color
-	); /* スクロール時に背景が透けないように */
-	z-index: 8;
-	border-bottom: 1px solid var(--border-color);
+    background-color: var(
+        --main-bg-color
+    ); /* スクロール時に背景が透けないように */
+    z-index: 8;
+    border-bottom: 1px solid var(--border-color);
 }
 .timeline-tab-button {
-	flex-grow: 1;
-	padding: 1rem;
-	border: none;
-	background: none;
-	font-size: 1rem;
-	cursor: pointer;
-	color: var(--secondary-text-color);
-	font-weight: 500;
-	position: relative;
+    flex-grow: 1;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    position: relative;
 
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .timeline-tab-button:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 .timeline-tab-button.active::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 60px;
-	height: 4px;
-	background-color: var(--primary-color);
-	border-radius: 9999px;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 9999px;
 }
 .timeline-tab-button.active {
-	color: var(--text-color);
-	font-weight: 700;
+    color: var(--text-color);
+    font-weight: 700;
 }
 
 /* ポストフォーム */
 .post-form {
-	padding: 1rem;
-	display: flex;
-	gap: 0.5rem;
+    padding: 1rem;
+    display: flex;
+    gap: 0.5rem;
 }
 
 /* リアルタイム更新用ボタンのスタイル */
 .new-posts-indicator {
-	position: sticky;
-	top: calc(56px + 50px); /* ヘッダー + タブの高さ */
-	z-index: 9; /* ポストフォームより手前に表示 */
-	text-align: center;
-	padding-bottom: 0.5rem; /* ボタンの下に少し余白 */
-	margin-bottom: -2.5rem; /* ボタンの高さ分、下の要素との距離を詰める */
+    position: sticky;
+    top: calc(56px + 50px); /* ヘッダー + タブの高さ */
+    z-index: 9; /* ポストフォームより手前に表示 */
+    text-align: center;
+    padding-bottom: 0.5rem; /* ボタンの下に少し余白 */
+    margin-bottom: -2.5rem; /* ボタンの高さ分、下の要素との距離を詰める */
 }
 .new-posts-indicator button {
-	background-color: var(--primary-color);
-	color: white;
-	border: none;
-	padding: 0.5rem 1rem;
-	border-radius: 9999px;
-	font-weight: bold;
-	cursor: pointer;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-	transition: background-color 0.2s;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s;
 }
 .new-posts-indicator button:hover {
-	background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
 }
 
 /* ポストフォーム */
 .post-form {
-	padding: 1rem;
-	display: flex;
-	gap: 0.5rem;
-	position: relative;
+    padding: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    position: relative;
 }
 
 .post-form .user-icon {
-	width: 48px;
-	height: 48px;
-	border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
 }
 
 .post-form .form-content {
-	flex-grow: 1;
+    flex-grow: 1;
 }
 
 .post-form textarea {
-	width: 100%;
-	min-height: 60px;
-	background-color: var(--main-bg-color);
-	color: var(--text-color);
-	border: none;
-	padding: 0.5rem 0;
-	box-sizing: border-box;
-	resize: vertical;
-	font-size: 1.25rem;
-	outline: none;
+    width: 100%;
+    min-height: 60px;
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
+    border: none;
+    padding: 0.5rem 0;
+    box-sizing: border-box;
+    resize: vertical;
+    font-size: 1.25rem;
+    outline: none;
 }
 
 .post-form-actions {
-	display: inline-block;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 0.5rem;
-	width: 100%;
+    display: inline-block;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    width: 100%;
 }
 
 .post-form-actions button {
-	padding: 0.5rem 1rem;
-	border-radius: 9999px;
-	border: none;
-	font-weight: 700;
-	cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .post-form-actions button:disabled {
-	background-color: #8ecdf8;
-	cursor: not-allowed;
+    background-color: #8ecdf8;
+    cursor: not-allowed;
 }
 
 .post-form-actions #post-submit-button {
-	background-color: var(--primary-color);
-	color: white;
+    background-color: var(--primary-color);
+    color: white;
 }
 
 .post-form-actions #post-submit-button:hover {
-	background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
 }
 
 .attachment-button,
 .emoji-pic-button,
 .post-mask-button {
-	background: none;
-	border: none;
-	cursor: pointer;
-	padding: 0.5rem;
-	color: var(--text-color);
-	line-height: 1;
-	border-radius: 50%;
-	transition: background-color 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-color);
+    line-height: 1;
+    border-radius: 50%;
+    transition: background-color 0.2s;
 }
 
 .attachment-button:hover,
 .emoji-pic-button:hover,
 .post-mask-button:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 .post-form-actions svg {
-	width: 20px;
-	height: 20px;
+    width: 20px;
+    height: 20px;
 }
 
 .attachment-button svg {
-	stroke: var(--text-color);
-	fill: none;
+    stroke: var(--text-color);
+    fill: none;
 }
 
 .emoji-pic-button svg {
-	stroke: none;
-	fill: var(--text-color);
+    stroke: none;
+    fill: var(--text-color);
 }
 
 .post-mask-button svg {
-	stroke: var(--text-color);
+    stroke: var(--text-color);
 }
 
 .post-mask-button.active svg {
-	stroke: var(--primary-color);
+    stroke: var(--primary-color);
 }
 
 .float-left {
-	float: left;
+    float: left;
 }
 .float-right {
-	float: right;
+    float: right;
 }
 .float-clear {
-	clear: both;
+    clear: both;
 }
 
 .file-preview-container {
-	margin-top: 0.5rem;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
 }
 
 .file-preview-item {
-	position: relative;
+    position: relative;
 }
 
 .file-preview-item img,
 .file-preview-item video {
-	max-width: 100px;
-	max-height: 100px;
-	border-radius: 8px;
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 8px;
 }
 
 .file-preview-remove {
-	position: absolute;
-	top: -5px;
-	right: -5px;
-	background: rgba(0, 0, 0, 0.7);
-	color: white;
-	border-radius: 50%;
-	width: 20px;
-	height: 20px;
-	border: none;
-	cursor: pointer;
-	font-size: 0.8rem; /* 変更なし */
-	line-height: 20px; /* 変更なし */
-	text-align: center;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.8rem; /* 変更なし */
+    line-height: 20px; /* 変更なし */
+    text-align: center;
 }
 
 #emoji-picker {
-	position: fixed;
-	z-index: 100;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	border-radius: 8px;
+    position: fixed;
+    z-index: 100;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
 }
 
 em-emoji-picker {
-	--rgb-background: var(--emoji-mart);
+    --rgb-background: var(--emoji-mart);
 }
 
 /* ▼▼▼ DMプレビューのボタンサイズを上書き ▼▼▼ */
 .dm-file-preview .file-preview-remove {
-	width: 18px;
-	height: 18px;
-	line-height: 18px;
-	font-size: 0.7rem;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 0.7rem;
 }
 
 /* ポスト表示 */
 .post {
-	padding: 1rem;
-	border-bottom: 1px solid var(--border-color);
-	display: flex;
-	gap: 0.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 0.5rem;
 }
 
 /* 孫返信用のインデントスタイル */
 .grandchild-reply {
-	padding-left: calc(
-		1rem + 48px + 0.5rem
-	); /* 通常のpadding + アイコン幅 + gap */
+    padding-left: calc(
+        1rem + 48px + 0.5rem
+    ); /* 通常のpadding + アイコン幅 + gap */
 }
 
 /* 広告ポスト用のスタイル */
 .ad-post {
-	background-color: var(--ad-bg-color); /* 通常のポストと少し色を変える */
+    background-color: var(--ad-bg-color); /* 通常のポストと少し色を変える */
 }
 .ad-post .post-author {
-	color: var(--secondary-text-color);
-	font-weight: normal; /* 太字にしない */
+    color: var(--secondary-text-color);
+    font-weight: normal; /* 太字にしない */
 }
 .ad-post .post-content {
-	cursor: default;
-	white-space: normal;
-	margin-bottom: 0;
+    cursor: default;
+    white-space: normal;
+    margin-bottom: 0;
 }
 
 .post .user-icon {
-	width: 48px;
-	height: 48px;
-	border-radius: 50%;
-	flex-shrink: 0;
-	object-fit: cover; /* アイコンが潰れるのを防ぐ */
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover; /* アイコンが潰れるのを防ぐ */
 }
 
 .post-main {
-	flex-grow: 1;
+    flex-grow: 1;
 }
 
 .post-header {
-	display: flex;
-	gap: 0.5rem;
-	align-items: center;
-	margin-bottom: 0.25rem;
-	position: relative;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 0.25rem;
+    position: relative;
 }
 
 .post-author {
-	font-weight: bold;
-	color: var(--text-color);
-	text-decoration: none;
+    font-weight: bold;
+    color: var(--text-color);
+    text-decoration: none;
 }
 
 .post-author:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .post-time {
-	font-size: 0.9rem;
-	color: var(--secondary-text-color);
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
 }
 
 .admin-badge,
 .verify-badge,
 .contributor-badge {
-	width: 1.2em;
-	height: 1.2em;
-	vertical-align: text-bottom;
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: text-bottom;
 }
 
 .post-content {
-	margin-bottom: 1rem;
-	white-space: pre-wrap;
-	line-break: anywhere;
-	font-size: 1rem;
-	cursor: pointer;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+    line-break: anywhere;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 .post-content.post-mask-title {
-	margin-bottom: auto;
+    margin-bottom: auto;
 }
 
 .user-me {
-	line-break: anywhere;
+    line-break: anywhere;
 }
 
 .post-content a,
 .user-me a,
 .notification-item-content a {
-	color: var(--primary-color);
-	text-decoration: none;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 .post-content a:hover,
 .user-me a:hover,
 .notification-item-content a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 .post-actions {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	max-width: 425px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 425px;
 }
 
 .post-actions button {
-	background: none;
-	border: none;
-	color: var(--secondary-text-color);
-	padding: 0;
-	font-size: 0.9rem;
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--secondary-text-color);
+    padding: 0;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
 }
 
 .post-actions button svg {
-	width: 1.25rem;
-	height: 1.25rem;
-	vertical-align: middle;
-	fill: none;
-	stroke: currentColor;
-	stroke-width: 2;
-	transition:
-		fill 0.2s,
-		stroke 0.2s,
-		color 0.2s;
+    width: 1.25rem;
+    height: 1.25rem;
+    vertical-align: middle;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition:
+        fill 0.2s,
+        stroke 0.2s,
+        color 0.2s;
 }
 
 .reply-button:hover {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .like-button:hover {
-	color: var(--like-color);
+    color: var(--like-color);
 }
 .like-button.liked {
-	color: var(--like-color);
-	font-weight: bold; /* いいね済みの数字を太字に */
+    color: var(--like-color);
+    font-weight: bold; /* いいね済みの数字を太字に */
 }
 .like-button.liked svg {
-	fill: currentColor; /* いいね済みのアイコンを塗りつぶす */
+    fill: currentColor; /* いいね済みのアイコンを塗りつぶす */
 }
 
 .star-button:hover {
-	color: var(--star-color);
+    color: var(--star-color);
 }
 .star-button.starred {
-	color: var(--star-color);
-	font-weight: bold; /* お気に入り済みの数字を太字に */
+    color: var(--star-color);
+    font-weight: bold; /* お気に入り済みの数字を太字に */
 }
 .star-button.starred svg {
-	fill: currentColor; /* お気に入り済みのアイコンを塗りつぶす */
+    fill: currentColor; /* お気に入り済みのアイコンを塗りつぶす */
 }
 
 /* ▼▼▼ .post-actions .icon を削除し、svgの指定に統合 ▼▼▼ */
 .post-actions button svg {
-	width: 1.25rem; /* サイズを微調整 */
-	height: 1.25rem;
-	vertical-align: middle;
-	fill: none; /* デフォルトは塗りつぶしなし */
-	stroke: currentColor; /* 枠線の色は親のcolorに連動 */
-	stroke-width: 2;
-	transition:
-		fill 0.2s,
-		stroke 0.2s; /* 色の遷移を滑らかに */
+    width: 1.25rem; /* サイズを微調整 */
+    height: 1.25rem;
+    vertical-align: middle;
+    fill: none; /* デフォルトは塗りつぶしなし */
+    stroke: currentColor; /* 枠線の色は親のcolorに連動 */
+    stroke-width: 2;
+    transition:
+        fill 0.2s,
+        stroke 0.2s; /* 色の遷移を滑らかに */
 }
 
 .post-menu-btn {
-	position: absolute;
-	top: 0;
-	right: 0;
-	background: none;
-	border: none;
-	cursor: pointer;
-	font-size: 1.2rem;
-	color: var(--secondary-text-color);
-	padding: 0.25rem; /* クリック領域を確保 */
-	z-index: 5; /* 他の要素との重なり順を明確化 */
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    padding: 0.25rem; /* クリック領域を確保 */
+    z-index: 5; /* 他の要素との重なり順を明確化 */
 }
 
 .post-menu {
-	position: absolute;
-	right: 0;
-	top: 25px;
-	background: var(--main-bg-color);
-	border: 1px solid var(--border-color);
-	border-radius: 8px;
-	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-	z-index: 101;
-	width: 11rem;
-	overflow: hidden;
-	visibility: hidden;
-	opacity: 0;
-	transition:
-		opacity 0.1s ease-out,
-		visibility 0.1s;
-	pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 25px;
+    background: var(--main-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 101;
+    width: 11rem;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+        opacity 0.1s ease-out,
+        visibility 0.1s;
+    pointer-events: none;
 }
 
 /* このクラスが付くと表示される */
 .post-menu.is-visible {
-	visibility: visible;
-	opacity: 1;
-	pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .post-menu button {
-	width: 100%;
-	padding: 0.8rem 1.2rem;
-	text-align: left;
-	background: none;
-	border: none;
-	color: var(--text-color);
-	font-size: 0.95rem;
-	cursor: pointer;
-	transition: background-color 0.2s;
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    text-align: left;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .post-menu button:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 .edit-modal-attachments {
-	margin-top: 1rem;
-	padding: 1rem;
-	background-color: var(--bg-color);
-	border-radius: 8px;
-	font-size: 0.9rem;
-	color: var(--secondary-text-color);
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--bg-color);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
 }
 
 .edit-modal-attachments p {
-	margin: 0 0 0.5rem 0;
-	font-weight: bold;
+    margin: 0 0 0.5rem 0;
+    font-weight: bold;
 }
 
 .edit-modal-attachments .attachments-container {
-	pointer-events: none; /* 添付ファイルは編集不可のため操作を無効化 */
+    pointer-events: none; /* 添付ファイルは編集不可のため操作を無効化 */
 }
 
 .post-menu .delete-btn {
-	color: #f4212e;
-	font-weight: bold;
+    color: #f4212e;
+    font-weight: bold;
 }
 
 /* アイコンが縦に伸びるのを防ぎ、クリック範囲をアイコンの高さに限定する */
 .post .user-icon-link {
-	align-self: flex-start;
+    align-self: flex-start;
 }
 
 .replying-to a {
-	color: var(--primary-color);
-	text-decoration: none;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 .parent-post-container {
-	padding-left: 0.9rem;
-	border-left: 2px solid var(--border-color);
-	margin-left: 24px;
-	margin-bottom: 1rem;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--border-color);
+    margin-left: 24px;
+    margin-bottom: 1rem;
 }
 
 /* 添付ファイル表示のスタイル */
 .attachments-container {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0.5rem;
-	margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 1rem;
 }
 
 .attachment-item {
-	border: 1px solid var(--border-color);
-	border-radius: 8px;
-	overflow: hidden;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
 }
 
 .attachment-item img,
 .attachment-item video,
 .attachment-item audio {
-	max-height: 15em;
-	max-width: 100%;
-	display: block;
-	cursor: pointer;
+    max-height: 15em;
+    max-width: 100%;
+    display: block;
+    cursor: pointer;
 }
 
 .attachment-fileinfo {
-	display: block;
-	padding: 0.5rem;
-	font-size: 0.9rem;
-	text-decoration: none;
-	color: var(--bw);
+    display: block;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--bw);
 }
 
 .attachment-download-link {
-	display: block;
-	padding: 0.5rem;
-	font-size: 0.9rem;
-	text-decoration: none;
-	color: var(--primary-color);
+    display: block;
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--primary-color);
 }
 
 .attachment-download-link:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* 無限スクロール用トリガーのスタイル */
 .load-more-trigger {
-	height: 100px;
-	text-align: center;
-	padding: 2rem;
-	color: var(--secondary-text-color);
+    height: 100px;
+    text-align: center;
+    padding: 2rem;
+    color: var(--secondary-text-color);
 }
 
 /* 右側サイドバー */
 #right-sidebar {
-	position: sticky;
-	top: 0;
-	height: 100vh;
-	width: 340px;
-	padding: 1rem 1.2rem;
-	box-sizing: border-box;
-	flex-shrink: 0;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    width: 340px;
+    padding: 1rem 1.2rem;
+    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 #right-sidebar-links-container {
@@ -1058,981 +1058,981 @@ em-emoji-picker {
 }
 
 .sidebar-widget {
-	background-color: var(--bg-color);
-	border-radius: 16px;
-	margin-bottom: 1rem;
-	overflow: hidden;
+    background-color: var(--bg-color);
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    overflow: hidden;
 }
 
 .widget-title {
-	font-size: 1.25rem;
-	font-weight: 800;
-	padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding: 0.75rem 1rem;
 }
 
 /* ▼▼▼ このブロックを修正 ▼▼▼ */
 .widget-item {
-	padding: 0.75rem 1rem;
-	cursor: pointer;
-	transition: background-color 0.2s;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 .widget-item:hover {
-	background-color: var(--widget-bg-color);
+    background-color: var(--widget-bg-color);
 }
 
 .notification-item {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
 }
 /* ▲▲▲ 修正ここまで ▲▲▲ */
 
 .notification-item-content {
-	flex-grow: 1;
+    flex-grow: 1;
 }
 
 .notification-new {
-	background-color: var(--notification-bg-color);
-	border-left: 4px solid var(--primary-color);
-	/* padding-leftをwidget-itemのpaddingと合わせる */
-	padding-left: calc(1rem - 4px);
+    background-color: var(--notification-bg-color);
+    border-left: 4px solid var(--primary-color);
+    /* padding-leftをwidget-itemのpaddingと合わせる */
+    padding-left: calc(1rem - 4px);
 }
 
 /* ▼▼▼ クラス名を修正 ▼▼▼ */
 .notification-delete-btn {
-	background: none;
-	border: none;
-	color: var(--secondary-text-color);
-	font-size: 1.5rem;
-	line-height: 1;
-	padding: 0.25rem;
-	border-radius: 50%;
-	cursor: pointer;
-	flex-shrink: 0;
+    background: none;
+    border: none;
+    color: var(--secondary-text-color);
+    font-size: 1.5rem;
+    line-height: 1;
+    padding: 0.25rem;
+    border-radius: 50%;
+    cursor: pointer;
+    flex-shrink: 0;
 }
 /* ▲▲▲ 修正ここまで ▲▲▲ */
 
 .notification-delete-btn:hover {
-	background-color: #e0e0e0;
+    background-color: #e0e0e0;
 }
 
 /* 背景色のアニメーション定義 */
 @keyframes highlight-bg-fade {
-	0%,
-	50% {
-		background-color: #e8f5fd;
-	} /* 1.5秒間ハイライトを維持 */
-	100% {
-		background-color: transparent;
-	}
+    0%,
+    50% {
+        background-color: #e8f5fd;
+    } /* 1.5秒間ハイライトを維持 */
+    100% {
+        background-color: transparent;
+    }
 }
 
 /* 縦線のアニメーション定義 */
 @keyframes highlight-border-fade {
-	0%,
-	50% {
-		opacity: 1;
-	} /* 1.5秒間ハイライトを維持 */
-	100% {
-		opacity: 0;
-	}
+    0%,
+    50% {
+        opacity: 1;
+    } /* 1.5秒間ハイライトを維持 */
+    100% {
+        opacity: 0;
+    }
 }
 /* ▲▲▲ 追加ここまで ▲▲▲ */
 
 .sidebar-search-widget {
-	background-color: var(--bg-color);
-	border-radius: 9999px;
-	padding: 0.5rem 1rem;
-	margin-bottom: 1rem;
-	display: flex;
-	align-items: center;
+    background-color: var(--bg-color);
+    border-radius: 9999px;
+    padding: 0.5rem 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
 }
 
 .sidebar-search-widget input {
-	border: none;
-	background: transparent;
-	outline: none;
-	font-size: 1rem;
-	color: var(--text-color);
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 1rem;
+    color: var(--text-color);
 }
 
 .sidebar-search-widget svg {
-	width: 20px;
-	height: 20px;
-	fill: none;
-	stroke: var(--secondary-text-color);
-	margin-right: 0.5rem;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: var(--secondary-text-color);
+    margin-right: 0.5rem;
 }
 
 .recommend-user {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 0.8rem; /* 要素間の隙間を追加 */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.8rem; /* 要素間の隙間を追加 */
 }
 
 /* ▼▼▼ このブロックを新規追加 ▼▼▼ */
 /* ユーザー情報を含むリンク（aタグ）の挙動を定義 */
 .recommend-user > a {
-	min-width: 0; /* flexアイテムが自身のコンテンツ幅以下に縮むことを許可 */
-	flex-shrink: 1; /* 親コンテナが狭いときに縮むことを許可 */
-	overflow: hidden; /* はみ出し防止のため */
+    min-width: 0; /* flexアイテムが自身のコンテンツ幅以下に縮むことを許可 */
+    flex-shrink: 1; /* 親コンテナが狭いときに縮むことを許可 */
+    overflow: hidden; /* はみ出し防止のため */
 }
 
 /* ユーザー名とIDを囲むdiv */
 .recommend-user > a > div {
-	overflow: hidden; /* 中のspanがはみ出た場合に隠すため */
+    overflow: hidden; /* 中のspanがはみ出た場合に隠すため */
 }
 
 /* フォローボタンは縮まないようにする */
 .recommend-user > button {
-	flex-shrink: 0;
+    flex-shrink: 0;
 }
 /* ▲▲▲ 追加ここまで ▲▲▲ */
 
 .recommend-user span {
-	font-weight: 700;
-	/* ▼▼▼ 以下の4行を追加 ▼▼▼ */
-	display: block; /* ellipsisを効かせるためにblock要素にする */
-	white-space: nowrap; /* テキストを折り返さない */
-	overflow: hidden; /* はみ出たテキストを隠す */
-	text-overflow: ellipsis; /* はみ出た部分を...で表示 */
+    font-weight: 700;
+    /* ▼▼▼ 以下の4行を追加 ▼▼▼ */
+    display: block; /* ellipsisを効かせるためにblock要素にする */
+    white-space: nowrap; /* テキストを折り返さない */
+    overflow: hidden; /* はみ出たテキストを隠す */
+    text-overflow: ellipsis; /* はみ出た部分を...で表示 */
 }
 
 .recommend-user button,
 .profile-follow-button {
-	padding: 0.5rem 1rem;
-	border-radius: 9999px !important;
-	/* !importantで形状を強制 */
-	font-weight: 700;
-	cursor: pointer;
-	transition:
-		background-color 0.2s,
-		color 0.2s,
-		border-color 0.2s;
-	white-space: nowrap;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px !important;
+    /* !importantで形状を強制 */
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background-color 0.2s,
+        color 0.2s,
+        border-color 0.2s;
+    white-space: nowrap;
 }
 
 body.dark .recommend-user button {
-	border: none;
+    border: none;
 }
 
 body.dark .profile-follow-button {
-	border-color: var(--text-color);
+    border-color: var(--text-color);
 }
 
 .follow-button-not-following {
-	background-color: #0f1419;
-	color: white;
+    background-color: #0f1419;
+    color: white;
 }
 
 .follow-button-not-following:hover {
-	background-color: #272c30;
+    background-color: #272c30;
 }
 
 .follow-button-following {
-	background-color: white;
-	color: #0f1419;
+    background-color: white;
+    color: #0f1419;
 }
 
 .follow-button-following:hover {
-	background-color: #fce8ec;
-	color: var(--like-color);
-	border-color: var(--like-color) !important;
+    background-color: #fce8ec;
+    color: var(--like-color);
+    border-color: var(--like-color) !important;
 }
 
 /* 未ログイン時バナー */
 #login-banner {
-	position: fixed;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background-color: var(--primary-color);
-	color: white;
-	padding: 1rem 2rem;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
 }
 
 .login-banner-content h2 {
-	transform: translateY(0.4rem);
-	margin: 0;
+    transform: translateY(0.4rem);
+    margin: 0;
 }
 
 .login-banner-content h4 {
-	transform: translate(-0.45rem, -0.5rem);
-	margin: 0.5rem;
+    transform: translate(-0.45rem, -0.5rem);
+    margin: 0.5rem;
 }
 
 /* ログインボタン: 白背景、黒文字 */
 #banner-login-button {
-	background: var(--primary-color);
-	color: white;
-	border: 1px solid; /* 枠線を非表示に変更 */
-	margin-left: 1rem;
-	padding: 0.6rem 1.2rem;
-	border-radius: 9999px !important;
-	font-weight: 700;
-	cursor: pointer;
-	font-size: 0.9rem;
-	transition: background-color 0.2s;
+    background: var(--primary-color);
+    color: white;
+    border: 1px solid; /* 枠線を非表示に変更 */
+    margin-left: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px !important;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
 }
 
 #banner-login-button:hover {
-	background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
 }
 
 /* 参加ボタン: 通常の青背景、白文字 */
 #banner-signup-button {
-	background: white; /* 通常の青に変更 */
-	color: black;
-	border: none; /* 枠線を非表示に変更 */
-	margin-left: 1rem;
-	padding: 0.6rem 1.2rem;
-	border-radius: 9999px !important;
-	font-weight: 700;
-	cursor: pointer;
-	font-size: 0.9rem;
-	transition: background-color 0.2s;
+    background: white; /* 通常の青に変更 */
+    color: black;
+    border: none; /* 枠線を非表示に変更 */
+    margin-left: 1rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px !important;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
 }
 
 #banner-signup-button:hover {
-	background-color: #f0f0f0; /* ホバー色も対応 */
+    background-color: #f0f0f0; /* ホバー色も対応 */
 }
 
 /* ポスト用モーダル */
 .modal-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.4);
-	display: flex;
-	justify-content: center;
-	align-items: flex-start;
-	z-index: 1001;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 1001;
 }
 
 .modal-content {
-	background: var(--main-bg-color);
-	border-radius: 16px;
-	width: 100%;
-	max-width: 600px;
-	position: relative;
+    background: var(--main-bg-color);
+    border-radius: 16px;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
 }
 
 .modal-close-btn {
-	position: absolute;
-	top: 0.1rem;
-	right: 0.2rem;
-	background: #888;
-	color: white;
-	border-radius: 50%;
-	width: 1.5rem;
-	height: 1.5rem;
-	border: none;
-	font-size: 1.5rem;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	line-height: 1;
+    position: absolute;
+    top: 0.1rem;
+    right: 0.2rem;
+    background: #888;
+    color: white;
+    border-radius: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
 }
 
 /* 画像プレビュー用モーダル */
 #image-preview-modal {
-	align-items: center;
-	justify-content: center;
-	cursor: zoom-out;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
 }
 
 #image-preview-modal-content {
-	max-width: 90vw;
-	max-height: 90vh;
-	border-radius: 8px;
-	cursor: default;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    cursor: default;
 }
 
 #image-preview-modal .modal-close-btn {
-	top: 2rem;
-	right: 2rem;
-	background: rgba(0, 0, 0, 0.5);
-	width: 32px;
-	height: 32px;
-	font-size: 1.5rem;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    width: 32px;
+    height: 32px;
+    font-size: 1.5rem;
 }
 
 /* プロフィール画面 */
 #profile-header {
-	padding: 1rem;
-	border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
 }
 
 #profile-header .header-top {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
 }
 
 #profile-header .user-icon-large {
-	object-fit: cover; /* アイコンが潰れるのを防ぐ */
-	width: 128px;
-	height: 128px;
-	border-radius: 50%;
+    object-fit: cover; /* アイコンが潰れるのを防ぐ */
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
 }
 
 #profile-header .profile-actions {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 #profile-header .dm-button {
-	padding: 0.5rem;
-	border-radius: 50%;
-	border: 1px solid var(--text-color);
-	/* 枠線の色を黒に変更 */
-	background: none;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	color: var(--text-color);
+    padding: 0.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--text-color);
+    /* 枠線の色を黒に変更 */
+    background: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
 }
 
 #profile-header .dm-button:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 #profile-header .dm-button svg {
-	width: 20px;
-	height: 20px;
-	stroke: var(--text-color);
-	fill: none;
+    width: 20px;
+    height: 20px;
+    stroke: var(--text-color);
+    fill: none;
 }
 
 #profile-header .profile-info {
-	margin-top: 1rem;
+    margin-top: 1rem;
 }
 #profile-header h2 {
-	margin: 0;
+    margin: 0;
 }
 
 #profile-header .user-id {
-	color: var(--secondary-text-color);
-	margin-bottom: 1rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 1rem;
 }
 
 #profile-header .user-stats {
-	display: flex;
-	gap: 1rem;
-	margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 #profile-tabs {
-	display: flex;
-	border-bottom: 1px solid var(--border-color);
+    display: flex;
+    border-bottom: 1px solid var(--border-color);
 }
 
 /* ▼▼▼ このブロックを新規追加 ▼▼▼ */
 #profile-sub-tabs-container {
-	/* サブメニューがない場合は非表示にする */
-	&:empty {
-		display: none;
-	}
-	/* メインのタブとの区別のための線 */
-	border-bottom: 1px solid var(--border-color);
+    /* サブメニューがない場合は非表示にする */
+    &:empty {
+        display: none;
+    }
+    /* メインのタブとの区別のための線 */
+    border-bottom: 1px solid var(--border-color);
 }
 .profile-sub-tabs {
-	display: flex;
+    display: flex;
 }
 /* ▲▲▲ 追加ここまで ▲▲▲ */
 
 .tab-button {
-	flex-grow: 1;
-	padding: 1rem;
-	border: none;
-	background: none;
-	font-size: 1rem;
-	cursor: pointer;
-	color: var(--secondary-text-color);
-	font-weight: 500;
-	position: relative;
+    flex-grow: 1;
+    padding: 1rem;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--secondary-text-color);
+    font-weight: 500;
+    position: relative;
 }
 
 .tab-button:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 .tab-button.active::after {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	width: 60px;
-	height: 4px;
-	background-color: var(--primary-color);
-	border-radius: 9999px;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: var(--primary-color);
+    border-radius: 9999px;
 }
 
 .tab-button.active {
-	color: var(--text-color);
-	font-weight: 700;
+    color: var(--text-color);
+    font-weight: 700;
 }
 
 .profile-card {
-	padding: 1rem;
-	border-bottom: 1px solid var(--border-color);
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
 }
 /* プロフィール画面のフォロー/フォロワー統計のスタイル */
 #profile-header .user-stats a {
-	color: inherit; /* 通常時は周りのテキストと同じ色 */
-	text-decoration: none; /* 下線を消す */
-	transition: text-decoration 0.2s;
+    color: inherit; /* 通常時は周りのテキストと同じ色 */
+    text-decoration: none; /* 下線を消す */
+    transition: text-decoration 0.2s;
 }
 
 #profile-header .user-stats a:hover {
-	text-decoration: underline; /* ホバー時に下線を表示 */
+    text-decoration: underline; /* ホバー時に下線を表示 */
 }
 
 /* プロフィール画面の参加日のスタイル */
 #profile-header .profile-joined {
-	display: flex;
-	align-items: center;
-	gap: 0.5rem;
-	color: var(--secondary-text-color);
-	font-size: 0.95rem;
-	margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary-text-color);
+    font-size: 0.95rem;
+    margin-top: 0.6rem;
 }
 
 #profile-header .profile-joined .calendar-icon {
-	width: 1rem;
-	height: 1rem;
-	flex-shrink: 0;
-	stroke-width: 1.8;
+    width: 1rem;
+    height: 1rem;
+    flex-shrink: 0;
+    stroke-width: 1.8;
 }
 
 /* プロフィール画面のフォローリスト専用サブメニューのスタイル */
 #profile-sub-tabs-container {
-	border-bottom: 1px solid var(--border-color);
-	position: sticky;
-	/* [修正点] ヘッダーのpadding(1rem=16px * 2)とborder(1px)を考慮した正確なtop値 */
-	top: calc(1rem + 1.25rem + 1rem + 1px); /* ヘッダーの実際の高さに合わせる */
-	background-color: var(--pg-bg-color);
-	backdrop-filter: blur(12px);
-	z-index: 9;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    /* [修正点] ヘッダーのpadding(1rem=16px * 2)とborder(1px)を考慮した正確なtop値 */
+    top: calc(1rem + 1.25rem + 1rem + 1px); /* ヘッダーの実際の高さに合わせる */
+    background-color: var(--pg-bg-color);
+    backdrop-filter: blur(12px);
+    z-index: 9;
 }
 
 .profile-sub-tabs {
-	display: flex;
+    display: flex;
 }
 
 .scidlink {
-	color: var(--secondary-text-color);
-	border: none;
-	text-decoration: none;
+    color: var(--secondary-text-color);
+    border: none;
+    text-decoration: none;
 }
 
 .scidlink:hover {
-	border-bottom: 1px black solid;
+    border-bottom: 1px black solid;
 }
 
 .media-grid-container {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr); /* 3カラム表示 */
-	gap: 2px; /* グリッド間の隙間 */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3カラム表示 */
+    gap: 2px; /* グリッド間の隙間 */
 }
 
 .media-grid-item {
-	position: relative;
-	width: 100%;
-	aspect-ratio: 1 / 1; /* 正方形を維持 */
-	background-color: var(--border-color);
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* 正方形を維持 */
+    background-color: var(--border-color);
 }
 
 .media-grid-item img,
 .media-grid-item video {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover; /* アスペクト比を維持したままコンテナを埋める */
-	transition: filter 0.2s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* アスペクト比を維持したままコンテナを埋める */
+    transition: filter 0.2s;
 }
 
 .media-grid-item:hover img,
 .media-grid-item:hover video {
-	filter: brightness(0.8); /* ホバー時に少し暗くする */
+    filter: brightness(0.8); /* ホバー時に少し暗くする */
 }
 
 /* 設定画面 */
 #settings-form {
-	padding: 1rem;
-	display: flex;
-	flex-direction: column;
-	gap: 1.5rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 #settings-form label {
-	font-weight: 700;
+    font-weight: 700;
 }
 
 .setting-icon-container {
-	display: flex;
-	align-items: center;
-	gap: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 #setting-icon-preview {
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	object-fit: cover;
-	border: 2px solid var(--border-color);
-	margin-top: 0.5rem;
-	cursor: pointer;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--border-color);
+    margin-top: 0.5rem;
+    cursor: pointer;
 }
 
 #reset-icon-btn {
-	padding: 0.5rem 1rem;
-	border-radius: 9999px;
-	border: 1px solid var(--border-color);
-	background: none;
-	color: var(--secondary-text-color);
-	font-weight: 700;
-	cursor: pointer;
-	transition:
-		background-color 0.2s,
-		border-color 0.2s;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    border: 1px solid var(--border-color);
+    background: none;
+    color: var(--secondary-text-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
 }
 
 #reset-icon-btn:hover {
-	background-color: var(--bg-color);
-	border-color: var(--secondary-text-color);
+    background-color: var(--bg-color);
+    border-color: var(--secondary-text-color);
 }
 
 #settings-form input[type='text'],
 #settings-form textarea {
-	width: 100%;
-	padding: 0.8rem;
-	background-color: var(--main-bg-color);
-	border: 1px solid var(--border-color);
-	color: var(--text-color);
-	border-radius: 8px;
-	font-size: 1rem;
-	box-sizing: border-box;
+    width: 100%;
+    padding: 0.8rem;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--border-color);
+    color: var(--text-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 #settings-form fieldset {
-	border: 1px solid var(--border-color);
-	border-radius: 8px;
-	padding: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
 }
 
 #settings-form fieldset legend {
-	font-weight: 700;
-	padding: 0 0.5rem;
+    font-weight: 700;
+    padding: 0 0.5rem;
 }
 
 #settings-form fieldset label {
-	font-weight: 400;
+    font-weight: 400;
 }
 
 #settings-form input[type='checkbox'],
 #settings-form select {
-	background-color: var(--main-bg-color);
-	color: var(--text-color);
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
 }
 
 #settings-form button[type='submit'] {
-	align-self: flex-end;
-	padding: 0.6rem 1.2rem;
-	border-radius: 9999px;
-	border: none;
-	background-color: var(--primary-color);
-	color: white;
-	font-weight: 700;
-	cursor: pointer;
-	transition: background-color 0.2s;
+    align-self: flex-end;
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
+    border: none;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 #settings-form button[type='submit']:hover {
-	background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
 }
 
 .settings-danger-zone {
-	margin-top: 2rem;
-	padding: 1.5rem 1rem;
-	border-top: 1px solid var(--border-color);
+    margin-top: 2rem;
+    padding: 1.5rem 1rem;
+    border-top: 1px solid var(--border-color);
 }
 
 #settings-logout-btn,
 #settings-showlog-btn {
-	padding: 0.6rem 1.2rem;
-	border-radius: 9999px;
-	font-weight: 700;
-	cursor: pointer;
-	background-color: var(--main-bg-color);
-	border: 1px solid var(--like-color);
-	color: var(--like-color);
-	transition:
-		background-color 0.2s,
-		border-color 0.2s;
-	text-decoration-line: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--like-color);
+    color: var(--like-color);
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
+    text-decoration-line: none;
 }
 
 #settings-logout-btn:hover,
 #settings-showlog-btn:hover {
-	background-color: var(--danger-color);
-	border-color: var(--like-color);
+    background-color: var(--danger-color);
+    border-color: var(--like-color);
 }
 
 #settings-account-switcher-btn {
-	padding: 0.6rem 1.2rem;
-	border-radius: 9999px;
-	font-weight: 700;
-	cursor: pointer;
-	background-color: var(--main-bg-color);
-	border: 1px solid var(--primary-color);
-	color: var(--primary-color);
-	transition:
-		background-color 0.2s,
-		border-color 0.2s;
-	margin-right: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
+    margin-right: 0.5rem;
 }
 #settings-account-switcher-btn:hover {
-	background-color: var(--light-primary-color);
-	border-color: var(--primary-color);
+    background-color: var(--light-primary-color);
+    border-color: var(--primary-color);
 }
 
 #dm-list-container {
-	width: 100%; /* 幅を100%に */
-	border-right: none; /* 右の境界線を削除 */
-	overflow-y: auto;
-	display: flex;
-	flex-direction: column;
+    width: 100%; /* 幅を100%に */
+    border-right: none; /* 右の境界線を削除 */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 .dm-new-message-btn {
-	-webkit-appearance: none;
-	appearance: none;
-	width: 100%;
-	padding: 1rem;
-	font-weight: bold;
-	font-size: 1rem;
-	color: var(--primary-color);
-	border: none;
-	border-bottom: 1px solid var(--border-color);
-	background-color: var(--main-bg-color);
-	cursor: pointer;
-	transition: background-color 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--primary-color);
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--main-bg-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 .dm-new-message-btn:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 .dm-list-item {
-	padding: 1rem;
-	border-bottom: 1px solid var(--border-color);
-	cursor: pointer;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	gap: 0.5rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
 }
 .dm-list-item:hover,
 .dm-list-item.active {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 .dm-list-item-title {
-	font-weight: bold;
-	flex-grow: 1;
-	white-space: normal;
-	word-break: break-word;
+    font-weight: bold;
+    flex-grow: 1;
+    white-space: normal;
+    word-break: break-word;
 }
 .dm-manage-btn {
-	color: var(--text-color);
-	background: var(--main-bg-color);
-	border: 1px solid var(--text-color);
-	cursor: pointer;
-	padding: 0.5rem;
-	border-radius: 50%;
-	flex-shrink: 0;
-	transition:
-		background-color 0.2s,
-		border-color 0.2s;
+    color: var(--text-color);
+    background: var(--main-bg-color);
+    border: 1px solid var(--text-color);
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
 }
 .dm-manage-btn:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 #dm-conversation-container {
-	display: flex;
-	flex-direction: column;
-	height: calc(100vh - 57px); /* ヘッダー分を引く */
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 57px); /* ヘッダー分を引く */
 }
 
 .dm-conversation-view {
-	flex-grow: 1;
-	overflow-y: auto;
-	padding: 1rem;
-	display: flex;
-	flex-direction: column-reverse;
-	/* justify-content と align-items を削除し、デフォルトの挙動に任せる */
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column-reverse;
+    /* justify-content と align-items を削除し、デフォルトの挙動に任せる */
 }
 
 .dm-message-container {
-	display: flex;
-	gap: 0.8rem;
-	margin-bottom: 1rem;
-	max-width: 90%;
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+    max-width: 90%;
 }
 .dm-message-container.sent {
-	flex-direction: row-reverse;
-	align-self: flex-end;
-	position: relative;
+    flex-direction: row-reverse;
+    align-self: flex-end;
+    position: relative;
 }
 .dm-message-container.sent .dm-message-menu-btn {
-	opacity: 1;
+    opacity: 1;
 }
 
 .dm-message-menu-btn {
-	position: absolute;
-	top: -28px;
-	right: 8px;
-	z-index: 1;
-	background: none;
-	border: none;
-	font-size: 1.2rem;
-	color: var(--secondary-text-color);
-	padding: 0.1rem;
-	width: 28px;
-	height: 28px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 50%;
-	cursor: pointer;
-	opacity: 1;
-	transition: background-color 0.2s;
-	box-shadow: none;
+    position: absolute;
+    top: -28px;
+    right: 8px;
+    z-index: 1;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: var(--secondary-text-color);
+    padding: 0.1rem;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 1;
+    transition: background-color 0.2s;
+    box-shadow: none;
 }
 
 .dm-message-container .post-menu {
-	top: 0px;
-	right: 0;
-	left: auto;
-	bottom: auto;
-	transform: none;
+    top: 0px;
+    right: 0;
+    left: auto;
+    bottom: auto;
+    transform: none;
 }
 .dm-message-container.received {
-	align-self: flex-start; /* 左寄せ */
-	align-items: flex-end; /* アイコンとメッセージバブルの下端を揃える */
+    align-self: flex-start; /* 左寄せ */
+    align-items: flex-end; /* アイコンとメッセージバブルの下端を揃える */
 }
 .dm-message-icon {
-	width: 32px;
-	height: 32px;
-	border-radius: 50%;
-	flex-shrink: 0;
-	align-self: flex-end; /* アイコンは常に下端に配置 */
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    align-self: flex-end; /* アイコンは常に下端に配置 */
 }
 .dm-message-container.sent .dm-message-wrapper {
-	align-items: flex-end;
+    align-items: flex-end;
 }
 .dm-message-container.received .dm-message-wrapper {
-	align-items: flex-start;
+    align-items: flex-start;
 }
 
 .dm-message-wrapper {
-	position: relative;
-	min-width: 0;
-	display: flex;
-	flex-direction: column;
+    position: relative;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
 }
 .dm-message-meta {
-	font-size: 0.8rem;
-	color: var(--secondary-text-color);
-	margin-bottom: 0.25rem;
-	padding: 0 0.5rem;
-	width: max-content;
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+    margin-bottom: 0.25rem;
+    padding: 0 0.5rem;
+    width: max-content;
 }
 .dm-message-container.sent .dm-message-meta {
-	text-align: right;
+    text-align: right;
 }
 .dm-message {
-	padding: 0.5rem 0.7rem;
-	border-radius: 18px;
-	white-space: pre-wrap;
-	font-weight: 400;
-	line-height: 1.4;
-	overflow-wrap: break-word;
-	word-break: break-word;
-	font-size: 0.85rem;
+    padding: 0.5rem 0.7rem;
+    border-radius: 18px;
+    white-space: pre-wrap;
+    font-weight: 400;
+    line-height: 1.4;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    font-size: 0.85rem;
 }
 .dm-message-container.sent .dm-message {
-	background-color: var(--primary-color);
-	color: white;
-	border-bottom-right-radius: 4px;
+    background-color: var(--primary-color);
+    color: white;
+    border-bottom-right-radius: 4px;
 }
 .dm-message-container.sent .attachment-download-link {
-	color: white;
-	font-weight: 500;
+    color: white;
+    font-weight: 500;
 }
 .dm-message-container.received .attachment-download-link {
-	color: var(--primary-color);
-	font-weight: 500;
+    color: var(--primary-color);
+    font-weight: 500;
 }
 .attachment-download-link {
-	text-decoration: none;
+    text-decoration: none;
 }
 .attachment-download-link:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 .dm-message-container.received .dm-message {
-	background-color: var(--bg-color);
-	color: var(--text-color);
-	border-bottom-left-radius: 4px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    border-bottom-left-radius: 4px;
 }
 .dm-message-form {
-	position: sticky;
-	border-top: 1px solid var(--border-color);
-	padding: 0.5rem 1rem;
-	display: flex;
-	align-items: flex-end;
-	gap: 0.5rem;
-	background-color: var(--main-bg-color);
-	bottom: 0;
+    position: sticky;
+    border-top: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    background-color: var(--main-bg-color);
+    bottom: 0;
 }
 
 /*.dm-message-form {}*/
 
 .dm-form-content {
-	flex-grow: 1;
-	display: flex;
-	flex-direction: column;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .dm-form-content textarea {
-	flex-grow: 1;
-	resize: none;
-	border: 1px solid var(--border-color);
-	border-radius: 8px;
-	background-color: var(--main-bg-color);
-	padding: 0.5rem;
-	font-size: 1rem;
-	line-height: 1.2;
-	background-color: var(--bg-color);
-	color: var(--text-color);
+    flex-grow: 1;
+    resize: none;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--main-bg-color);
+    padding: 0.5rem;
+    font-size: 1rem;
+    line-height: 1.2;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .dm-form-actions {
-	display: flex;
-	align-items: center;
-	padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0;
 }
 
 .dm-file-preview {
-	margin-top: 0.5rem;
-	max-height: 110px;
-	overflow-y: auto;
-	padding: 0.5rem;
+    margin-top: 0.5rem;
+    max-height: 110px;
+    overflow-y: auto;
+    padding: 0.5rem;
 }
 
 .dm-message-form button {
-	background: var(--primary-color);
-	color: white;
-	border: none;
-	border-radius: 50%;
-	width: 40px;
-	height: 40px;
-	flex-shrink: 0;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #dm-attachment-btn {
-	background: none;
-	color: var(--primary-color);
+    background: none;
+    color: var(--primary-color);
 }
 #dm-attachment-btn:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 .dm-message-form button:hover {
-	background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
 }
 #dm-attachment-btn:hover {
-	background-color: #e8f5fd;
+    background-color: #e8f5fd;
 }
 
 .dm-message-form button svg {
-	width: 20px;
-	height: 20px;
-	fill: none; /* デフォルトで塗りつぶしなし */
-	stroke: currentColor;
+    width: 20px;
+    height: 20px;
+    fill: none; /* デフォルトで塗りつぶしなし */
+    stroke: currentColor;
 }
 .dm-message-form #send-dm-btn svg {
-	fill: none;
-	stroke: white;
+    fill: none;
+    stroke: white;
 }
 .dm-system-message {
-	font-size: 0.8rem;
-	color: var(--secondary-text-color);
-	text-align: center;
-	padding: 0.5rem;
-	align-self: center; /* Flexコンテナ内で中央に配置 */
-	margin-bottom: 1rem;
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
+    text-align: center;
+    padding: 0.5rem;
+    align-self: center; /* Flexコンテナ内で中央に配置 */
+    margin-bottom: 1rem;
 }
 .dm-welcome-message {
-	margin: auto;
-	text-align: center;
-	color: var(--secondary-text-color);
+    margin: auto;
+    text-align: center;
+    color: var(--secondary-text-color);
 }
 .dm-message a {
-	text-decoration: none;
+    text-decoration: none;
 }
 /* 共通: ホバー時に下線を表示 */
 .dm-message a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* システムメッセージのリンク */
 .dm-system-message a {
-	color: inherit; /* 親要素の色を継承（色を変えない） */
-	font-weight: 500;
-	text-decoration: none;
+    color: inherit; /* 親要素の色を継承（色を変えない） */
+    font-weight: 500;
+    text-decoration: none;
 }
 
 .dm-system-message a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* ユーザーアイコンと名前のリンク */
 .dm-user-link {
-	color: inherit !important; /* 強制的に色を継承 */
-	text-decoration: none !important;
-	line-height: 1; /* aタグ自体の余分な高さをなくす */
+    color: inherit !important; /* 強制的に色を継承 */
+    text-decoration: none !important;
+    line-height: 1; /* aタグ自体の余分な高さをなくす */
 }
 .dm-user-link:hover {
-	text-decoration: underline !important;
+    text-decoration: underline !important;
 }
 
 /* 受信メッセージのリンク色 */
 .dm-message-container.received .dm-message a {
-	color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 /* 送信メッセージのリンク色 */
 .dm-message-container.sent .dm-message a {
-	color: white; /* ダウンロードリンクも白になる */
-	font-weight: 500;
+    color: white; /* ダウンロードリンクも白になる */
+    font-weight: 500;
 }
 
 /* DM管理モーダルのボタンスタイル */
@@ -2040,123 +2040,123 @@ body.dark .profile-follow-button {
 /* DM作成/管理モーダルのはみ出し修正 */
 #create-dm-modal input,
 #dm-manage-modal input {
-	box-sizing: border-box;
+    box-sizing: border-box;
 
-	background-color: var(--main-bg-color);
-	color: var(--text-color);
+    background-color: var(--main-bg-color);
+    color: var(--text-color);
 }
 
 /* DM管理モーダルのボタンスタイル */
 #dm-manage-modal-content button {
-	padding: 0.5rem 1rem;
-	border-radius: 9999px;
-	font-weight: 700;
-	cursor: pointer;
-	border: 1px solid var(--border-color);
-	background: none;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    background: none;
 }
 #dm-manage-modal-content button:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 #dm-manage-modal-content #save-dm-title-btn {
-	background-color: var(--primary-color);
-	color: white;
-	border: none;
-	transition:
-		background-color 0.2s,
-		border-color 0.2s;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
 }
 #dm-manage-modal-content #save-dm-title-btn:hover {
-	background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
 }
 #dm-manage-modal-content .remove-member-btn,
 #dm-manage-modal-content #leave-dm-btn,
 #dm-manage-modal-content #disband-dm-btn {
-	color: var(--like-color);
-	border-color: var(--danger-color);
-	transition:
-		background-color 0.2s,
-		border-color 0.2s;
+    color: var(--like-color);
+    border-color: var(--danger-color);
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
 }
 #dm-manage-modal-content .remove-member-btn:hover,
 #dm-manage-modal-content #leave-dm-btn:hover,
 #dm-manage-modal-content #disband-dm-btn:hover {
-	background-color: var(--danger-color);
-	border-color: var(--like-color);
+    background-color: var(--danger-color);
+    border-color: var(--like-color);
 }
 #dm-manage-modal-content .sethost-member-btn {
-	color: var(--primary-color);
-	background-color: var(--main-bg-color);
-	border: 1px solid var(--light-primary-color);
-	transition:
-		background-color 0.2s,
-		border-color 0.2s;
+    color: var(--primary-color);
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--light-primary-color);
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
 }
 #dm-manage-modal-content .sethost-member-btn:hover {
-	background-color: var(--light-primary-color);
-	border-color: var(--primary-color);
+    background-color: var(--light-primary-color);
+    border-color: var(--primary-color);
 }
 
 .freeze-notice {
-	background-color: #fffbe6;
-	border: 1px solid #ffe58f;
-	padding: 1rem;
-	border-radius: 8px;
-	margin: 1rem 0;
-	color: #8a6d3b;
-	text-align: center;
+    background-color: #fffbe6;
+    border: 1px solid #ffe58f;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    color: #8a6d3b;
+    text-align: center;
 }
 .freeze-notice a {
-	color: #8a6d3b;
-	font-weight: bold;
-	text-decoration: underline;
+    color: #8a6d3b;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 /* ローディング */
 #loading-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: var(--loading-color);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--loading-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .spinner {
-	border: 4px solid var(--spin);
-	width: 36px;
-	height: 36px;
-	border-radius: 50%;
-	border-left-color: var(--primary-color);
-	animation: spin 1s ease infinite;
+    border: 4px solid var(--spin);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: var(--primary-color);
+    animation: spin 1s ease infinite;
 }
 
 .post-content,
 .dm-message {
-	line-height: 1.5;
-	white-space: normal;
+    line-height: 1.5;
+    white-space: normal;
 }
 
 .post-content > *:first-child,
 .dm-message > *:first-child {
-	margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 .post-content > *,
 .dm-message > * {
-	margin-bottom: 0 !important;
+    margin-bottom: 0 !important;
 }
 .post-content p,
 .dm-message p {
-	margin-top: 0.8em; /* pタグの上にだけマージンを設定 */
+    margin-top: 0.8em; /* pタグの上にだけマージンを設定 */
 }
 /* 連続するpタグはマージンを詰める */
 .post-content p + p,
 .dm-message p + p {
-	margin-top: 0.2em;
+    margin-top: 0.2em;
 }
 
 /* 見出し (h1-h6): 上下のマージンをリセットし、必要な間隔を再設定 */
@@ -2172,143 +2172,143 @@ body.dark .profile-follow-button {
 .dm-message h5,
 .post-content h6,
 .dm-message h6 {
-	margin-top: 0.8em;
-	margin-bottom: 0.4em;
-	font-weight: bold;
-	line-height: 1.2;
+    margin-top: 0.8em;
+    margin-bottom: 0.4em;
+    font-weight: bold;
+    line-height: 1.2;
 }
 .post-content h1,
 .dm-message h1 {
-	font-size: 2em;
+    font-size: 2em;
 }
 .post-content h2,
 .dm-message h2 {
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 .post-content h3,
 .dm-message h3 {
-	font-size: 1.17em;
+    font-size: 1.17em;
 }
 .post-content h4,
 .dm-message h4 {
-	font-size: 1em;
+    font-size: 1em;
 }
 .post-content h5,
 .dm-message h5 {
-	font-size: 0.83em;
+    font-size: 0.83em;
 }
 .post-content h6,
 .dm-message h6 {
-	font-size: 0.67em;
+    font-size: 0.67em;
 }
 
 /* 引用 */
 .post-content blockquote,
 .dm-message blockquote {
-	margin-top: 0.8em;
-	border-left: 4px solid rgba(29, 155, 240, 0.5);
-	padding: 0.5em 1em;
-	background-color: var(--bg-color);
-	color: var(--secondary-text-color);
-	border-radius: 0 8px 8px 0;
+    margin-top: 0.8em;
+    border-left: 4px solid rgba(29, 155, 240, 0.5);
+    padding: 0.5em 1em;
+    background-color: var(--bg-color);
+    color: var(--secondary-text-color);
+    border-radius: 0 8px 8px 0;
 }
 .post-content blockquote > *:first-child,
 .dm-message blockquote > *:first-child {
-	margin-top: 0 !important;
+    margin-top: 0 !important;
 }
 
 /* コードブロック */
 .post-content pre,
 .dm-message pre {
-	margin-top: 0.8em;
-	position: relative;
-	background-color: #2d2d2d;
-	color: #f8f8f2;
-	padding: 1em;
-	border-radius: 8px;
-	overflow-x: auto;
-	white-space: pre-wrap; /* コードブロック内でも折り返すように */
-	word-break: break-all;
+    margin-top: 0.8em;
+    position: relative;
+    background-color: #2d2d2d;
+    color: #f8f8f2;
+    padding: 1em;
+    border-radius: 8px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* コードブロック内でも折り返すように */
+    word-break: break-all;
 }
 .post-content pre code,
 .dm-message pre code {
-	font-family: 'Consolas', 'Courier New', monospace;
-	font-size: 0.9em;
-	white-space: pre-wrap; /* コード内の折り返しを強制 */
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.9em;
+    white-space: pre-wrap; /* コード内の折り返しを強制 */
 }
 
 /* インラインコード */
 .inline-code-wrapper {
-	display: inline-flex;
-	align-items: center;
-	background-color: rgba(0, 0, 0, 0.08);
-	border-radius: 4px;
-	padding: 0.1em 0.2em 0.1em 0.4em;
-	line-height: 1; /* 親要素の行間の影響を減らす */
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: 0.1em 0.2em 0.1em 0.4em;
+    line-height: 1; /* 親要素の行間の影響を減らす */
 }
 .post-content .inline-code-wrapper code,
 .dm-message .inline-code-wrapper code {
-	font-family: 'Consolas', 'Courier New', monospace;
-	font-size: 0.85em;
-	padding: 0;
-	background: none;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 0.85em;
+    padding: 0;
+    background: none;
 }
 
 /* コピーボタン */
 .copy-btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: rgba(255, 255, 255, 0.1);
-	color: white;
-	border: 1px solid rgba(255, 255, 255, 0.2);
-	border-radius: 4px;
-	cursor: pointer;
-	transition: all 0.2s;
-	font-size: 0.8em; /* テキスト表示用に調整 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.8em; /* テキスト表示用に調整 */
 }
 .copy-btn:hover {
-	background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 .copy-btn svg {
-	width: 1em;
-	height: 1em;
+    width: 1em;
+    height: 1em;
 }
 .markdown-copy-btn {
-	position: absolute;
-	top: 0.5em;
-	right: 0.5em;
-	padding: 0.3em 0.5em;
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    padding: 0.3em 0.5em;
 }
 .markdown-copy-btn-inline {
-	padding: 0.1em 0.3em;
-	margin-left: 0.4em;
-	color: #333;
-	background-color: rgba(0, 0, 0, 0.05);
-	border-color: rgba(0, 0, 0, 0.1);
+    padding: 0.1em 0.3em;
+    margin-left: 0.4em;
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 .markdown-copy-btn-inline:hover {
-	background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 /* アコーディオン */
 .post-content details,
 .dm-message details {
-	margin-top: 0.8em;
-	padding: 0.5em 1em;
-	border: 1px solid var(--border-color);
-	border-radius: 8px;
-	white-space: pre-wrap; /* [修正点] details内の改行を有効にする */
+    margin-top: 0.8em;
+    padding: 0.5em 1em;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    white-space: pre-wrap; /* [修正点] details内の改行を有効にする */
 }
 .post-content details > *,
 .dm-message details > * {
-	white-space: pre-wrap; /* 中の要素にも適用 */
+    white-space: pre-wrap; /* 中の要素にも適用 */
 }
 .post-content summary,
 .dm-message summary {
-	cursor: pointer;
-	font-weight: bold;
-	margin-bottom: 0.5em;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0.5em;
 }
 
 /* リスト */
@@ -2316,352 +2316,352 @@ body.dark .profile-follow-button {
 .dm-message ul,
 .post-content ol,
 .dm-message ol {
-	margin-top: 0.8em;
-	padding-left: 2em;
+    margin-top: 0.8em;
+    padding-left: 2em;
 }
 
 @keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
+    0% {
+        transform: rotate(0deg);
+    }
 
-	100% {
-		transform: rotate(360deg);
-	}
+    100% {
+        transform: rotate(360deg);
+    }
 }
 /* リポストインジケーター */
 .repost-indicator,
 .pinned-indicator {
-	color: var(--secondary-text-color);
-	font-size: 0.9em;
-	padding-bottom: 0.5rem;
-	display: flex;
-	align-items: center;
-	gap: 0.5em;
+    color: var(--secondary-text-color);
+    font-size: 0.9em;
+    padding-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
 .repost-indicator svg,
 .pinned-indicator svg {
-	width: 1em;
-	height: 1em;
-	stroke: currentColor;
+    width: 1em;
+    height: 1em;
+    stroke: currentColor;
 }
 .repost-indicator a {
-	color: inherit;
-	font-weight: bold;
-	text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
 }
 .repost-indicator a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 .repost-indicator-icon {
-	display: flex;
-	align-items: center;
-	justify-content: flex-end; /* 右寄せ */
-	flex-basis: 48px; /* 通常のアイコン幅に合わせる */
-	padding-right: 0.5rem; /* post-mainとのgapを考慮 */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* 右寄せ */
+    flex-basis: 48px; /* 通常のアイコン幅に合わせる */
+    padding-right: 0.5rem; /* post-mainとのgapを考慮 */
 }
 .repost-indicator svg {
-	width: 1.5em; /* アイコンサイズを調整 */
-	height: 1.5em;
-	stroke: currentColor;
-	flex-shrink: 0;
+    width: 1.5em; /* アイコンサイズを調整 */
+    height: 1.5em;
+    stroke: currentColor;
+    flex-shrink: 0;
 }
 /* 引用ポストの入れ子コンテナ */
 .nested-repost-container {
-	border: 1px solid var(--border-color);
-	border-radius: 16px;
-	margin-top: 1rem;
-	padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    margin-top: 1rem;
+    padding: 0.8rem;
 }
 .nested-repost-container .post {
-	border: none;
-	padding: 0;
+    border: none;
+    padding: 0;
 }
 /* 入れ子の中ではアクションボタンを非表示に */
 .nested-repost-container .post-actions {
-	display: none;
+    display: none;
 }
 
 /* 削除済みポストの表示 */
 .deleted-post-container {
-	border: 1px solid var(--border-color);
-	border-radius: 16px;
-	padding: 2rem;
-	text-align: center;
-	color: var(--secondary-text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    color: var(--secondary-text-color);
 }
 
 /* リポストボタン */
 .repost-button:hover {
-	color: #00ba7c; /* 緑色 */
+    color: #00ba7c; /* 緑色 */
 }
 .trends-widget-container {
-	border-top: 1px solid var(--border-color);
+    border-top: 1px solid var(--border-color);
 }
 
 .trends-widget-title {
-	font-size: 1.25rem;
-	font-weight: 800;
-	padding: 0.75rem 1rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    padding: 0.75rem 1rem;
 }
 
 .trend-item {
-	display: block;
-	padding: 0.75rem 1rem;
-	text-decoration: none;
-	color: inherit;
-	transition: background-color 0.2s;
+    display: block;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: inherit;
+    transition: background-color 0.2s;
 }
 
 .trend-item:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 .trend-item-meta {
-	font-size: 0.8rem;
-	color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
 }
 
 .trend-item-name {
-	font-weight: 700;
-	font-size: 1.1rem;
-	margin: 0.1rem 0;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin: 0.1rem 0;
 }
 
 .trend-item-count {
-	font-size: 0.8rem;
-	color: var(--secondary-text-color);
+    font-size: 0.8rem;
+    color: var(--secondary-text-color);
 }
 
 /* DM管理モーダルのメンバーリストにスクロールを適用 */
 #dm-member-list {
-	max-height: 200px; /* 例えば、最大高さを200pxに設定 */
-	overflow-y: auto; /* 内容が最大高さを超えた場合のみ、縦方向のスクロールバーを表示 */
-	padding-right: 0.5rem; /* スクロールバーとコンテンツの間の余白を確保 */
-	box-sizing: border-box; /* paddingを含めて高さを計算 */
-	border-top: 1px solid var(--border-color); /* 上下の境界線を明確にする */
-	border-bottom: 1px solid var(--border-color); /* 上下の境界線を明確にする */
-	margin-top: 0.5rem;
+    max-height: 200px; /* 例えば、最大高さを200pxに設定 */
+    overflow-y: auto; /* 内容が最大高さを超えた場合のみ、縦方向のスクロールバーを表示 */
+    padding-right: 0.5rem; /* スクロールバーとコンテンツの間の余白を確保 */
+    box-sizing: border-box; /* paddingを含めて高さを計算 */
+    border-top: 1px solid var(--border-color); /* 上下の境界線を明確にする */
+    border-bottom: 1px solid var(--border-color); /* 上下の境界線を明確にする */
+    margin-top: 0.5rem;
 }
 
 #account-switcher-modal .modal-content {
-	padding: 2rem 1rem 1.5rem;
+    padding: 2rem 1rem 1.5rem;
 }
 .account-switcher-list {
-	margin: 1rem 0;
-	padding: 0;
-	list-style: none;
+    margin: 1rem 0;
+    padding: 0;
+    list-style: none;
 }
 .account-switcher-item {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
-	padding: 0.7rem 0.2rem;
-	border-bottom: 1px solid var(--border-color);
-	transition: background 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.7rem 0.2rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background 0.2s;
 }
 .account-switcher-item .switcher-user-info {
-	display: flex;
-	align-items: center;
-	gap: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
 }
 .account-switcher-item .switcher-user-icon {
-	width: 32px;
-	height: 32px;
-	border-radius: 50%;
-	object-fit: cover;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 .account-switcher-item .switcher-delete-btn {
-	background: var(--main-bg-color);
-	border: none;
-	color: var(--like-color);
-	font-size: 1.2rem;
-	border-radius: 50%;
-	width: 28px;
-	height: 28px;
-	cursor: pointer;
-	transition: background 0.2s;
+    background: var(--main-bg-color);
+    border: none;
+    color: var(--like-color);
+    font-size: 1.2rem;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 .account-switcher-item .switcher-delete-btn:hover {
-	background: var(--danger-color);
+    background: var(--danger-color);
 }
 .account-switcher-add-btn {
-	width: 100%;
-	background-color: var(--primary-color);
-	color: white;
-	border: none;
-	border-radius: 9999px;
-	font-weight: 700;
-	padding: 0.7rem 0;
-	margin-bottom: 1rem;
-	font-size: 1.05rem;
-	cursor: pointer;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 700;
+    padding: 0.7rem 0;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    cursor: pointer;
 }
 .account-switcher-add-btn:hover {
-	background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
 }
 .account-switcher-item.active {
-	background: var(--notification-bg-color);
+    background: var(--notification-bg-color);
 }
 .account-switcher-item:not(.active):hover {
-	background: var(--widget-bg-color);
-	cursor: pointer;
+    background: var(--widget-bg-color);
+    cursor: pointer;
 }
 /* ワンクッション */
 .post-mask-alert {
-	padding: 0.6rem 1.2rem;
-	border-radius: 10px;
-	font-weight: 700;
-	cursor: pointer;
-	background-color: var(--main-bg-color);
-	border: 1px solid var(--primary-color);
-	color: var(--primary-color);
-	transition:
-		background-color 0.2s,
-		border-color 0.2s;
-	margin-right: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: var(--main-bg-color);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
+    margin-right: 0.5rem;
 }
 .post-mask-alert:hover {
-	background-color: var(--light-primary-color);
-	border-color: var(--primary-color);
+    background-color: var(--light-primary-color);
+    border-color: var(--primary-color);
 }
 
 #trl {
-	height: 1.2em;
-	vertical-align: text-bottom;
+    height: 1.2em;
+    vertical-align: text-bottom;
 }
 
 .tag-post-button {
-	-webkit-appearance: none;
-	appearance: none;
-	width: 100%;
-	padding: 1rem;
-	font-weight: bold;
-	font-size: 1rem;
-	color: var(--primary-color);
-	border: none;
-	border-bottom: 1px solid var(--border-color);
-	background-color: var(--main-bg-color);
-	cursor: pointer;
-	transition: background-color 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    padding: 1rem;
+    font-weight: bold;
+    font-size: 1rem;
+    color: var(--primary-color);
+    border: none;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--main-bg-color);
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 .tag-post-button:hover {
-	background-color: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 /* レスポンシブ */
 @media (max-width: 1100px) {
-	#right-sidebar {
-		display: none;
-	}
+    #right-sidebar {
+        display: none;
+    }
 }
 
 @media (max-width: 1000px) {
-	#left-nav {
-		width: 88px;
-	}
-	#left-nav .nav-item {
-		justify-content: center;
-	}
-	#left-nav .nav-item .nav-item-text {
-		display: none;
-	}
+    #left-nav {
+        width: 88px;
+    }
+    #left-nav .nav-item {
+        justify-content: center;
+    }
+    #left-nav .nav-item .nav-item-text {
+        display: none;
+    }
 
-	/* ポストボタンのアイコン表示切り替え */
-	.nav-item-post {
-		width: 52px; /* アイコンに合わせたサイズ */
-		height: 52px;
-		padding: 0;
-	}
-	.nav-item-post .nav-item-icon {
-		display: block; /* 縮小ビューではアイコンを表示 */
-	}
-	.nav-item-post .nav-item-icon svg {
-		fill: none;
-		stroke: white;
-		width: 1.5rem;
-		height: 1.5rem;
-	}
-	.nav-item-post .nav-item-text {
-		display: none; /* 縮小ビューではテキストを非表示 */
-	}
+    /* ポストボタンのアイコン表示切り替え */
+    .nav-item-post {
+        width: 52px; /* アイコンに合わせたサイズ */
+        height: 52px;
+        padding: 0;
+    }
+    .nav-item-post .nav-item-icon {
+        display: block; /* 縮小ビューではアイコンを表示 */
+    }
+    .nav-item-post .nav-item-icon svg {
+        fill: none;
+        stroke: white;
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+    .nav-item-post .nav-item-text {
+        display: none; /* 縮小ビューではテキストを非表示 */
+    }
 
-	/* アカウントボタンのテキスト非表示 */
-	#left-nav #account-button .account-info {
-		display: none;
-	}
+    /* アカウントボタンのテキスト非表示 */
+    #left-nav #account-button .account-info {
+        display: none;
+    }
 }
 
 @media (max-width: 680px) {
-	.app-container {
-		flex-direction: column;
-		padding-bottom: 50px;
-	}
-	#left-nav {
-		position: fixed;
-		bottom: 0;
-		top: auto;
-		left: 0;
-		right: 0;
-		width: 100%;
-		height: auto;
-		flex-direction: row;
-		justify-content: space-around;
-		background-color: var(--bg-color);
-		border-top: 1px solid var(--border-color);
-		z-index: 100;
-		padding: 0;
-	}
-	#left-nav .nav-item {
-		flex: 1;
-	}
-	#nav-menu-top {
-		flex-direction: row;
-		justify-content: space-around;
-		width: 100%;
-	}
-	.nav-item[href='#likes'],
-	.nav-item[href='#stars'] {
-		display: none;
-	}
-	.nav-item-post {
-		position: fixed;
-		z-index: 20;
-		bottom: 4rem;
-		right: 1rem;
-		display: flex;
-	}
-	#account-button {
-		position: fixed;
-		z-index: 30;
-		top: 0;
-		right: 0.5rem;
-		width: auto;
-	}
-	.header-search-bar {
-		width: calc(95% - 4rem);
-	}
-	.header-action-btn {
-		position: sticky;
-		right: 4.5rem;
-	}
-	#profile-tabs .tab-button.mobile-hidden {
-		display: none;
-	}
-	.dm-message-form {
-		bottom: 4em;
-	}
-	#main-content {
-		border: none;
-		width: 100%;
-	}
-	#login-banner {
-		flex-direction: column;
-		text-align: center;
-		gap: 1rem;
-	}
-	#nav-logo {
-		display: none;
-	}
+    .app-container {
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    #left-nav {
+        position: fixed;
+        bottom: 0;
+        top: auto;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: var(--bg-color);
+        border-top: 1px solid var(--border-color);
+        z-index: 100;
+        padding: 0;
+    }
+    #left-nav .nav-item {
+        flex: 1;
+    }
+    #nav-menu-top {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .nav-item[href='#likes'],
+    .nav-item[href='#stars'] {
+        display: none;
+    }
+    .nav-item-post {
+        position: fixed;
+        z-index: 20;
+        bottom: 4rem;
+        right: 1rem;
+        display: flex;
+    }
+    #account-button {
+        position: fixed;
+        z-index: 30;
+        top: 0;
+        right: 0.5rem;
+        width: auto;
+    }
+    .header-search-bar {
+        width: calc(95% - 4rem);
+    }
+    .header-action-btn {
+        position: sticky;
+        right: 4.5rem;
+    }
+    #profile-tabs .tab-button.mobile-hidden {
+        display: none;
+    }
+    .dm-message-form {
+        bottom: 4em;
+    }
+    #main-content {
+        border: none;
+        width: 100%;
+    }
+    #login-banner {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    #nav-logo {
+        display: none;
+    }
 }

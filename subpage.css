@@ -1,43 +1,43 @@
 :root {
-  --primary-color: #1d9bf0;
-  --border-color: #cfd9de;
-  --text-color: #0f1419;
-  --secondary-text-color: #536471;
-  --bg-color: #f7f9f9;
+    --primary-color: #1d9bf0;
+    --border-color: #cfd9de;
+    --text-color: #0f1419;
+    --secondary-text-color: #536471;
+    --bg-color: #f7f9f9;
 }
 body{
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: 1rem;
-  margin: 0;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-sizing: border-box;
 }
 .container {
-  background: white;
-  padding: 2rem 3rem;
-  border-radius: 16px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.1);
-  width: 100%;
-  max-width: 600px;
-  box-sizing: border-box;
+    background: white;
+    padding: 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 600px;
+    box-sizing: border-box;
 }
 h1 {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  margin-top:0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top:0;
 }
 h1 img {
-  width: 32px;
-  height:32px;
+    width: 32px;
+    height:32px;
 }
 p,a{
-  text-align:center;
+    text-align:center;
 }

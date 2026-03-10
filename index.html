@@ -1,327 +1,327 @@
 <!doctype html>
 <html lang="ja">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="robots" content="noindex, nofollow, noarchive" />
-		<title>NyaX</title>
-		<link rel="icon" href="favicon.png" type="image/png" />
-		<link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/emojione@4.0.0/extras/css/emojione.min.css"
-		/>
-		<link rel="stylesheet" href="./style.css" />
-		<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/emojione@4.0.0/lib/js/emojione.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
-	</head>
-	<!-- Google tag (gtag.js) -->
-	<script
-		async
-		src="https://www.googletagmanager.com/gtag/js?id=G-JYBQTQ1HCX"
-	></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="robots" content="noindex, nofollow, noarchive" />
+        <title>NyaX</title>
+        <link rel="icon" href="favicon.png" type="image/png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="favicon.png" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/emojione@4.0.0/extras/css/emojione.min.css"
+        />
+        <link rel="stylesheet" href="./style.css" />
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/dompurify/dist/purify.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@twemoji/api@latest/dist/twemoji.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/emojione@4.0.0/lib/js/emojione.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/emoji-mart@latest/dist/browser.js"></script>
+    </head>
+    <!-- Google tag (gtag.js) -->
+    <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-JYBQTQ1HCX"
+    ></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
-		gtag('config', 'G-JYBQTQ1HCX');
-	</script>
-	<body>
-		<div class="app-container">
-			<!-- 左側ナビゲーションメニュー -->
-			<nav id="left-nav">
-				<div id="nav-logo"></div>
-				<div id="nav-menu-top"></div>
-				<div id="nav-menu-bottom"></div>
-			</nav>
-			<!-- 中央メインコンテンツ -->
-			<main id="main-content">
-				<header id="page-header">
-					<!-- ヘッダー内容はJSで動的に生成されます -->
-				</header>
-				<div id="content-area">
-					<div id="main-screen" class="screen hidden">
-						<div class="timeline-tabs-sticky-container">
-							<div class="timeline-tabs">
-								<button
-									class="timeline-tab-button active"
-									data-tab="foryou"
-								>
-									すべて
-								</button>
-								<button
-									class="timeline-tab-button"
-									data-tab="following"
-								>
-									フォロー中
-								</button>
-							</div>
-						</div>
-						<div class="post-form-sticky-container">
-							<div class="post-form-container"></div>
-						</div>
-						<div id="timeline"></div>
-					</div>
-					<div id="explore-screen" class="screen hidden">
-						<div id="explore-content"></div>
-					</div>
-					<div id="notifications-screen" class="screen hidden">
-						<div id="notifications-content"></div>
-					</div>
-					<div id="likes-screen" class="screen hidden">
-						<div id="likes-content"></div>
-					</div>
-					<div id="stars-screen" class="screen hidden">
-						<div id="stars-content"></div>
-					</div>
-					<div id="profile-screen" class="screen hidden">
-						<div id="profile-header"></div>
-						<div id="profile-tabs"></div>
-						<div id="profile-content"></div>
-					</div>
-					<div id="settings-screen" class="screen hidden"></div>
-					<div id="post-detail-screen" class="screen hidden">
-						<div id="post-detail-content"></div>
-					</div>
-					<div id="search-results-screen" class="screen hidden">
-						<div id="search-results-content"></div>
-					</div>
-					<div id="dm-screen" class="screen hidden">
-						<div id="dm-content"></div>
-					</div>
-					<div id="admin-logs-screen" class="screen hidden">
-						<div id="admin-logs-content"></div>
-					</div>
-				</div>
-			</main>
-			<!-- 右側サイドバー -->
-			<aside id="right-sidebar">
-				<div id="right-sidebar-search-widget-container"></div>
-				<div id="recommendations-widget-container"></div>
-				<div id="right-sidebar-links-container"></div>
-			</aside>
-		</div>
-		<div id="login-banner" class="hidden">
-			<div class="login-banner-content">
-				<h2>NyaXはScratcherのためのSNSです</h2>
-				<h4>Scratchアカウントがあれば簡単に参加できます</h4>
-			</div>
-			<div class="login-banner-actions">
-				<button id="banner-login-button">ログイン</button>
-				<button id="banner-signup-button">参加</button>
-			</div>
-		</div>
-		<div id="post-modal" class="modal-overlay hidden">
-			<div class="modal-content">
-				<!--<button class="modal-close-btn">×</button>-->
-				<div class="post-form-container-modal"></div>
-			</div>
-		</div>
-		<div
-			id="image-preview-modal"
-			class="modal-overlay hidden"
-			onclick="window.closeImageModal()"
-		>
-			<button
-				class="modal-close-btn"
-				style="top: 1rem; right: 1rem; font-size: 2rem"
-			>
-				×
-			</button>
-			<img id="image-preview-modal-content" src="" alt="拡大画像" />
-		</div>
-		<div id="edit-post-modal" class="modal-overlay hidden">
-			<div class="modal-content">
-				<!--<button class="modal-close-btn">×</button>-->
-				<div id="edit-post-modal-content"></div>
-			</div>
-		</div>
-		<div id="create-dm-modal" class="modal-overlay hidden">
-			<div class="modal-content" style="max-width: 500px">
-				<button class="modal-close-btn">×</button>
-				<div id="create-dm-modal-content"></div>
-			</div>
-		</div>
-		<div id="dm-manage-modal" class="modal-overlay hidden">
-			<div class="modal-content" style="max-width: 500px">
-				<button class="modal-close-btn">×</button>
-				<div id="dm-manage-modal-content"></div>
-			</div>
-		</div>
-		<div id="account-switcher-modal" class="modal-overlay hidden">
-			<div class="modal-content" style="max-width: 400px">
-				<button class="modal-close-btn">×</button>
-				<div id="account-switcher-modal-content"></div>
-			</div>
-		</div>
-		<div
-			id="connection-error-overlay"
-			class="modal-overlay hidden"
-			style="z-index: 2000"
-		>
-			<div
-				style="
-					background: white;
-					padding: 2rem;
-					border-radius: 16px;
-					text-align: center;
-				"
-			>
-				<h2 style="margin-top: 0">NyaXに接続できませんでした</h2>
-				<p>ネットワーク接続を確認して、もう一度お試しください。</p>
-				<button
-					id="retry-connection-btn"
-					style="
-						padding: 0.6rem 1.2rem;
-						border-radius: 9999px;
-						border: none;
-						background-color: var(--primary-color);
-						color: white;
-						font-weight: 700;
-					"
-				>
-					再試行
-				</button>
-			</div>
-		</div>
-		<div
-			id="freeze-overlay"
-			class="modal-overlay hidden"
-			style="z-index: 2000; background: rgba(240, 240, 240, 0.95)"
-		>
-			<div
-				style="
-					background: white;
-					padding: 2rem;
-					border-radius: 16px;
-					text-align: center;
-					max-width: 500px;
-					margin: 1rem;
-					box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-				"
-			>
-				<h2 style="margin-top: 0; color: #d9534f">
-					あなたは凍結されています
-				</h2>
-				<p>
-					あなたは<a
-						href="rule"
-						target="_blank"
-						rel="noopener noreferrer"
-						>NyaXルール</a
-					>に違反したため凍結されました。
-				</p>
-				<p style="margin-top: 1.5rem">
-					<strong>凍結理由:</strong><br /><span
-						id="freeze-reason"
-						style="
-							display: inline-block;
-							margin-top: 0.5rem;
-							white-space: pre-wrap;
-						"
-					></span>
-				</p>
-				<small style="display: block; margin-top: 2rem"
-					><a
-						href="https://forms.gle/buZpMftRNWjfhqVz8"
-						target="_blank"
-						rel="noopener noreferrer"
-						>間違いですか? 異議申し立てをする</a
-					></small
-				>
-			</div>
-		</div>
-		<div id="loading-overlay"><div class="spinner"></div></div>
-		<div id="edit-dm-message-modal" class="modal-overlay hidden">
-			<div class="modal-content">
-				<!--<button class="modal-close-btn">×</button>-->
-				<div id="edit-dm-message-modal-content"></div>
-			</div>
-		</div>
-		<div
-			id="mainjs-error-overlay"
-			class="modal-overlay hidden"
-			style="z-index: 3001"
-		>
-			<div
-				style="
-					background: white;
-					padding: 2rem;
-					border-radius: 16px;
-					text-align: center;
-					max-width: 400px;
-					margin: 2rem auto;
-				"
-			>
-				<h2 style="margin-top: 0; color: #d9534f">エラー</h2>
-				<div
-					id="mainjs-error-text"
-					style="color: #d9534f; margin: 1em 0; word-break: break-all"
-				></div>
-				<p style="color: #888; font-size: 0.96em">
-					NyaXに問題が発生しました
-				</p>
-				<ul
-					style="
-						text-align: left;
-						color: #888;
-						margin: 1.2em 0 1.5em 0;
-						font-size: 0.98em;
-					"
-				>
-					<li>キャッシュや拡張機能の影響の可能性があります</li>
-					<li>
-						キャッシュの削除や拡張機能の無効化をしても直らない場合は管理者へご連絡ください
-					</li>
-				</ul>
-				<button
-					onclick="location.reload()"
-					style="
-						padding: 0.7em 1.5em;
-						font-size: 1em;
-						border-radius: 9999px;
-						background: #1d9bf0;
-						color: white;
-						border: none;
-						font-weight: 700;
-					"
-				>
-					再読み込み
-				</button>
-			</div>
-		</div>
+        gtag('config', 'G-JYBQTQ1HCX');
+    </script>
+    <body>
+        <div class="app-container">
+            <!-- 左側ナビゲーションメニュー -->
+            <nav id="left-nav">
+                <div id="nav-logo"></div>
+                <div id="nav-menu-top"></div>
+                <div id="nav-menu-bottom"></div>
+            </nav>
+            <!-- 中央メインコンテンツ -->
+            <main id="main-content">
+                <header id="page-header">
+                    <!-- ヘッダー内容はJSで動的に生成されます -->
+                </header>
+                <div id="content-area">
+                    <div id="main-screen" class="screen hidden">
+                        <div class="timeline-tabs-sticky-container">
+                            <div class="timeline-tabs">
+                                <button
+                                    class="timeline-tab-button active"
+                                    data-tab="foryou"
+                                >
+                                    すべて
+                                </button>
+                                <button
+                                    class="timeline-tab-button"
+                                    data-tab="following"
+                                >
+                                    フォロー中
+                                </button>
+                            </div>
+                        </div>
+                        <div class="post-form-sticky-container">
+                            <div class="post-form-container"></div>
+                        </div>
+                        <div id="timeline"></div>
+                    </div>
+                    <div id="explore-screen" class="screen hidden">
+                        <div id="explore-content"></div>
+                    </div>
+                    <div id="notifications-screen" class="screen hidden">
+                        <div id="notifications-content"></div>
+                    </div>
+                    <div id="likes-screen" class="screen hidden">
+                        <div id="likes-content"></div>
+                    </div>
+                    <div id="stars-screen" class="screen hidden">
+                        <div id="stars-content"></div>
+                    </div>
+                    <div id="profile-screen" class="screen hidden">
+                        <div id="profile-header"></div>
+                        <div id="profile-tabs"></div>
+                        <div id="profile-content"></div>
+                    </div>
+                    <div id="settings-screen" class="screen hidden"></div>
+                    <div id="post-detail-screen" class="screen hidden">
+                        <div id="post-detail-content"></div>
+                    </div>
+                    <div id="search-results-screen" class="screen hidden">
+                        <div id="search-results-content"></div>
+                    </div>
+                    <div id="dm-screen" class="screen hidden">
+                        <div id="dm-content"></div>
+                    </div>
+                    <div id="admin-logs-screen" class="screen hidden">
+                        <div id="admin-logs-content"></div>
+                    </div>
+                </div>
+            </main>
+            <!-- 右側サイドバー -->
+            <aside id="right-sidebar">
+                <div id="right-sidebar-search-widget-container"></div>
+                <div id="recommendations-widget-container"></div>
+                <div id="right-sidebar-links-container"></div>
+            </aside>
+        </div>
+        <div id="login-banner" class="hidden">
+            <div class="login-banner-content">
+                <h2>NyaXはScratcherのためのSNSです</h2>
+                <h4>Scratchアカウントがあれば簡単に参加できます</h4>
+            </div>
+            <div class="login-banner-actions">
+                <button id="banner-login-button">ログイン</button>
+                <button id="banner-signup-button">参加</button>
+            </div>
+        </div>
+        <div id="post-modal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <!--<button class="modal-close-btn">×</button>-->
+                <div class="post-form-container-modal"></div>
+            </div>
+        </div>
+        <div
+            id="image-preview-modal"
+            class="modal-overlay hidden"
+            onclick="window.closeImageModal()"
+        >
+            <button
+                class="modal-close-btn"
+                style="top: 1rem; right: 1rem; font-size: 2rem"
+            >
+                ×
+            </button>
+            <img id="image-preview-modal-content" src="" alt="拡大画像" />
+        </div>
+        <div id="edit-post-modal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <!--<button class="modal-close-btn">×</button>-->
+                <div id="edit-post-modal-content"></div>
+            </div>
+        </div>
+        <div id="create-dm-modal" class="modal-overlay hidden">
+            <div class="modal-content" style="max-width: 500px">
+                <button class="modal-close-btn">×</button>
+                <div id="create-dm-modal-content"></div>
+            </div>
+        </div>
+        <div id="dm-manage-modal" class="modal-overlay hidden">
+            <div class="modal-content" style="max-width: 500px">
+                <button class="modal-close-btn">×</button>
+                <div id="dm-manage-modal-content"></div>
+            </div>
+        </div>
+        <div id="account-switcher-modal" class="modal-overlay hidden">
+            <div class="modal-content" style="max-width: 400px">
+                <button class="modal-close-btn">×</button>
+                <div id="account-switcher-modal-content"></div>
+            </div>
+        </div>
+        <div
+            id="connection-error-overlay"
+            class="modal-overlay hidden"
+            style="z-index: 2000"
+        >
+            <div
+                style="
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 16px;
+                    text-align: center;
+                "
+            >
+                <h2 style="margin-top: 0">NyaXに接続できませんでした</h2>
+                <p>ネットワーク接続を確認して、もう一度お試しください。</p>
+                <button
+                    id="retry-connection-btn"
+                    style="
+                        padding: 0.6rem 1.2rem;
+                        border-radius: 9999px;
+                        border: none;
+                        background-color: var(--primary-color);
+                        color: white;
+                        font-weight: 700;
+                    "
+                >
+                    再試行
+                </button>
+            </div>
+        </div>
+        <div
+            id="freeze-overlay"
+            class="modal-overlay hidden"
+            style="z-index: 2000; background: rgba(240, 240, 240, 0.95)"
+        >
+            <div
+                style="
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 16px;
+                    text-align: center;
+                    max-width: 500px;
+                    margin: 1rem;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                "
+            >
+                <h2 style="margin-top: 0; color: #d9534f">
+                    あなたは凍結されています
+                </h2>
+                <p>
+                    あなたは<a
+                        href="rule"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >NyaXルール</a
+                    >に違反したため凍結されました。
+                </p>
+                <p style="margin-top: 1.5rem">
+                    <strong>凍結理由:</strong><br /><span
+                        id="freeze-reason"
+                        style="
+                            display: inline-block;
+                            margin-top: 0.5rem;
+                            white-space: pre-wrap;
+                        "
+                    ></span>
+                </p>
+                <small style="display: block; margin-top: 2rem"
+                    ><a
+                        href="https://forms.gle/buZpMftRNWjfhqVz8"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        >間違いですか? 異議申し立てをする</a
+                    ></small
+                >
+            </div>
+        </div>
+        <div id="loading-overlay"><div class="spinner"></div></div>
+        <div id="edit-dm-message-modal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <!--<button class="modal-close-btn">×</button>-->
+                <div id="edit-dm-message-modal-content"></div>
+            </div>
+        </div>
+        <div
+            id="mainjs-error-overlay"
+            class="modal-overlay hidden"
+            style="z-index: 3001"
+        >
+            <div
+                style="
+                    background: white;
+                    padding: 2rem;
+                    border-radius: 16px;
+                    text-align: center;
+                    max-width: 400px;
+                    margin: 2rem auto;
+                "
+            >
+                <h2 style="margin-top: 0; color: #d9534f">エラー</h2>
+                <div
+                    id="mainjs-error-text"
+                    style="color: #d9534f; margin: 1em 0; word-break: break-all"
+                ></div>
+                <p style="color: #888; font-size: 0.96em">
+                    NyaXに問題が発生しました
+                </p>
+                <ul
+                    style="
+                        text-align: left;
+                        color: #888;
+                        margin: 1.2em 0 1.5em 0;
+                        font-size: 0.98em;
+                    "
+                >
+                    <li>キャッシュや拡張機能の影響の可能性があります</li>
+                    <li>
+                        キャッシュの削除や拡張機能の無効化をしても直らない場合は管理者へご連絡ください
+                    </li>
+                </ul>
+                <button
+                    onclick="location.reload()"
+                    style="
+                        padding: 0.7em 1.5em;
+                        font-size: 1em;
+                        border-radius: 9999px;
+                        background: #1d9bf0;
+                        color: white;
+                        border: none;
+                        font-weight: 700;
+                    "
+                >
+                    再読み込み
+                </button>
+            </div>
+        </div>
 
-		<script>
-			window.onerror = function (message, source, lineno, colno, error) {
-				showMainJsError(
-					`JavaScriptエラー: ${message}<br>
+        <script>
+            window.onerror = function (message, source, lineno, colno, error) {
+                showMainJsError(
+                    `JavaScriptエラー: ${message}<br>
                 <small>${source}:${lineno}:${colno}</small><br>
                 <pre style="text-align:left;">${error && error.stack ? error.stack : ''}</pre>`,
-				);
-				return true;
-			};
-			window.onunhandledrejection = function (event) {
-				showMainJsError(
-					`未処理のPromise例外: ${event.reason ? event.reason.stack || event.reason : event}`,
-				);
-				return true;
-			};
-			function showMainJsError(html) {
-				var overlay = document.getElementById('mainjs-error-overlay');
-				var text = document.getElementById('mainjs-error-text');
-				if (overlay && text) {
-					text.innerHTML = String(html);
-					overlay.classList.remove('hidden');
-				}
-			}
-		</script>
-		<script src="main.js"></script>
-	</body>
+                );
+                return true;
+            };
+            window.onunhandledrejection = function (event) {
+                showMainJsError(
+                    `未処理のPromise例外: ${event.reason ? event.reason.stack || event.reason : event}`,
+                );
+                return true;
+            };
+            function showMainJsError(html) {
+                var overlay = document.getElementById('mainjs-error-overlay');
+                var text = document.getElementById('mainjs-error-text');
+                if (overlay && text) {
+                    text.innerHTML = String(html);
+                    overlay.classList.remove('hidden');
+                }
+            }
+        </script>
+        <script src="main.js"></script>
+    </body>
 </html>

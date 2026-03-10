@@ -1,162 +1,162 @@
 :root {
-	--primary-color: #1d9bf0;
-	--primary-hover-color: #1a8cd8;
-	--border-color: #cfd9de;
-	--text-color: #0f1419;
+    --primary-color: #1d9bf0;
+    --primary-hover-color: #1a8cd8;
+    --border-color: #cfd9de;
+    --text-color: #0f1419;
 }
 
 body {
-	font-family:
-		-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
-		sans-serif;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	margin: 0;
-	background-color: #f7f9f9;
+    font-family:
+        -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial,
+        sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f7f9f9;
 }
 
 .login-container {
-	background: white;
-	padding: 2.5rem;
-	border-radius: 16px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-	width: 100%;
-	max-width: 400px;
-	box-sizing: border-box;
-	text-align: center;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 .logo-link {
-	display: inline-block;
+    display: inline-block;
 }
 
 .logo-icon {
-	width: 50px;
-	height: 50px;
-	margin-bottom: 1rem;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 1rem;
 }
 
 h2 {
-	color: var(--text-color);
-	margin-bottom: 2rem;
-	font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    font-weight: 500;
 }
 
 .instruction {
-	color: #536471;
-	margin-bottom: 1.5rem;
-	line-height: 1.4;
+    color: #536471;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
 }
 
 #auth-step1 input {
-	width: 100%;
-	padding: 1rem;
-	margin-bottom: 1rem;
-	border: 1px solid var(--border-color);
-	border-radius: 8px;
-	font-size: 1rem;
-	box-sizing: border-box;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 #auth-step1 button,
 #auth-step2 button,
 #auth-step2 a {
-	display: block;
-	padding: 1rem;
-	margin-bottom: 1rem;
-	border-radius: 9999px;
-	font-weight: bold;
-	font-size: 1rem;
-	cursor: pointer;
-	transition:
-		background-color 0.2s,
-		border-color 0.2s;
-	text-decoration: none;
+    display: block;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 9999px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:
+        background-color 0.2s,
+        border-color 0.2s;
+    text-decoration: none;
 }
 
 #auth-step1 button,
 #auth-step2 button {
-	border: none;
-	width: 100%;
-	color: white;
-	background-color: var(--primary-color);
+    border: none;
+    width: 100%;
+    color: white;
+    background-color: var(--primary-color);
 }
 
 #auth-step1 button:hover,
 #auth-step2 button:hover {
-	background-color: var(--primary-hover-color);
+    background-color: var(--primary-hover-color);
 }
 
 #auth-step2 a {
-	width: 90%;
-	color: var(--primary-color);
-	background-color: white;
-	border: 1px solid #cce6ff;
+    width: 90%;
+    color: var(--primary-color);
+    background-color: white;
+    border: 1px solid #cce6ff;
 }
 
 #auth-step2 a:hover {
-	background-color: #cce6ff;
-	border-color: var(--primary-color);
+    background-color: #cce6ff;
+    border-color: var(--primary-color);
 }
 
 .verification-code {
-	font-size: 2rem;
-	font-weight: bold;
-	background: #f7f9f9;
-	padding: 1rem;
-	border-radius: 8px;
-	letter-spacing: 4px;
-	cursor: pointer;
-	margin-bottom: 1rem;
-	user-select: all;
+    font-size: 2rem;
+    font-weight: bold;
+    background: #f7f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    letter-spacing: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    user-select: all;
 }
 
 .error-message {
-	color: #f44336;
-	margin-top: 1rem;
-	font-weight: bold;
+    color: #f44336;
+    margin-top: 1rem;
+    font-weight: bold;
 }
 
 .copy-message {
-	color: #1d9bf0;
-	margin-top: 1rem;
-	font-weight: bold;
+    color: #1d9bf0;
+    margin-top: 1rem;
+    font-weight: bold;
 }
 
 .hidden {
-	display: none !important;
+    display: none !important;
 }
 
 #loading-overlay {
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: rgba(255, 255, 255, 0.8);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .spinner {
-	border: 4px solid rgba(0, 0, 0, 0.1);
-	width: 36px;
-	height: 36px;
-	border-radius: 50%;
-	border-left-color: var(--primary-color);
-	animation: spin 1s ease infinite;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: var(--primary-color);
+    animation: spin 1s ease infinite;
 }
 
 @keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
+    0% {
+        transform: rotate(0deg);
+    }
 
-	100% {
-		transform: rotate(360deg);
-	}
+    100% {
+        transform: rotate(360deg);
+    }
 }
