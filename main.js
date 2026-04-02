@@ -3982,6 +3982,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				currentTrigger.innerText = 'ポストの読み込みに失敗しました。';
 				currentPagination.hasMore = false;
 				if (localPostLoadObserver) localPostLoadObserver.disconnect();
+                load_btn.remove();
 			} finally {
 				load_btn.classList.remove("hide");
 
@@ -4003,6 +4004,7 @@ window.addEventListener('DOMContentLoaded', () => {
 						options.subType === 'replies_only' ? 'replies' : type;
 
 					if (!currentPagination.hasMore) {
+                        load_btn.remove();
 						finalTrigger.innerText =
 							container.querySelectorAll('.post').length === 0
 								? emptyMessages[emptyMessageKey] || ''
