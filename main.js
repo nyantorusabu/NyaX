@@ -3509,9 +3509,16 @@ window.addEventListener('DOMContentLoaded', () => {
                     <input type="checkbox" id="setting-lock" ${currentUser.settings.lock ? 'checked' : ''}><label for="setting-lock">ポストを非公開にする(β)</label><br>
                 </fieldset>
 
-                <fieldset><legend>TrustRank(β)</legend>
+                <fieldset><legend>TrustRank(推奨)</legend>
                     <input type="checkbox" id="setting-show-tlabel" ${currentUser.settings.show_trust_label ? 'checked' : ''}><label for="setting-show-tlabel">ユーザーのTrustRankを表示</label><br>
                 </fieldset>
+
+				<label for="setting-restricted-notification">Restricted以下のユーザーからの通知(未実装):</label>
+				<select id="setting-restricted-notification" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
+				    <option value="all">すべて</option>
+				    <option value="reply">返信のみ</option>
+				    <option value="none">受け取らない</option>
+				</select>
 
                 <label for"setting-emoji-kind">絵文字のフォント設定:</label>
                 <select id="setting-emoji-kind" style="width: 100%; padding: 0.8rem; border: 1px solid var(--border-color); border-radius: 8px; font-size: 1rem;">
