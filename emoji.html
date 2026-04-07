@@ -6,11 +6,26 @@
     <meta name="robots" content="noindex, nofollow, noarchive">
     <title>Emoji一覧</title>
     <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="root.css">
     <style>
+        :root{
+            --l-code-bg-color: #f0f2f5;
+            --d-code-bg-color: #505255;
+            --l-title: #333;
+            --d-title: #ddd;
+        }
+        body.light{
+            --code-bg-color: var(--l-code-bg-color);
+            --title: var(--l-title);
+        }
+        body.dark {
+            --code-bg-color: var(--d-code-bg-color);
+            --title: var(--d-title);
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background-color: #f0f2f5;
-            color: #1c1e21;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             margin: 0;
             padding: 2rem;
             display: flex;
@@ -19,7 +34,7 @@
         }
 
         h1 {
-            color: #333;
+            color: var(--title);
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -41,8 +56,8 @@
         }
 
         .emoji-card {
-            background-color: #ffffff;
-            border: 1px solid #dddfe2;
+            background-color: var(--main-bg-color);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
             padding: 1rem;
             text-align: center;
@@ -50,13 +65,13 @@
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 2px 4px var(--pg-bg-color);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .emoji-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 12px var(--spin);
         }
 
         .emoji-image {
@@ -64,12 +79,13 @@
             height: 64px;
             object-fit: contain;
             margin-bottom: 0.75rem;
+            background-color: var(--emoji-bg-color)
         }
 
         .emoji-name {
             font-weight: 600;
             font-size: 1rem;
-            color: #1c1e21;
+            color: var(--text-color);
             margin: 0 0 0.5rem 0;
             word-break: break-word;
         }
@@ -84,11 +100,11 @@
 
         .emoji-id-code {
             font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-            background-color: #f0f2f5;
+            background-color: var(--code-bg-color);
             padding: 0.2rem 0.4rem;
             border-radius: 4px;
             font-size: 0.8rem;
-            color: #657786;
+            color: var(--secondary-text-color);
             flex-grow: 1;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -97,7 +113,7 @@
 
         .copy-button {
             border: none;
-            background-color: #1877f2;
+            background-color: var(--primary-color);
             color: white;
             padding: 0.3rem 0.6rem;
             border-radius: 6px;
@@ -109,7 +125,7 @@
         }
 
         .copy-button:hover {
-            background-color: #166fe5;
+            background-color: var(--primary-hover-color);
         }
 
         .copy-button:disabled {
@@ -117,6 +133,17 @@
             cursor: not-allowed;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const ld = localStorage.getItem("ld");
+            if (ld !== null) {
+                if (ld == "d"){
+                    document.body.classList.add("dark");
+                    document.body.classList.remove("light");
+                }
+            }
+        });
+    </script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYBQTQ1HCX"></script>

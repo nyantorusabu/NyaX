@@ -9,18 +9,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./root.css">
     <style>
-        :root {
+        /*:root {
             --primary-color: #1d9bf0;
             --border-color: #eff3f4;
             --bg-color: #f7f9f9;
             --text-color: #0f1419;
             --secondary-text-color: #536471;
-        }
+        }*/
         body {
             font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             margin: 0;
-            background-color: #fff;
+            background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.7;
         }
@@ -40,9 +41,11 @@
             align-items: center;
             gap: 1rem;
         }
-        h1 img {
+        h1 .logo {
             width: 40px;
             height: 40px;
+            fill: var(--logo-color) !important;
+            stroke: var(--logo-color) !important;
         }
         h2 {
             font-size: 1.5rem;
@@ -92,6 +95,17 @@
             font-size: 0.9rem;
         }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const ld = localStorage.getItem("ld");
+            if (ld !== null) {
+                if (ld == "d"){
+                    document.body.classList.add("dark");
+                    document.body.classList.remove("light");
+                }
+            }
+        });
+    </script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYBQTQ1HCX"></script>
@@ -102,9 +116,12 @@
 
   gtag('config', 'G-JYBQTQ1HCX');
 </script>
-<body>
+<body class="light">
     <div class="container">
-        <h1><img src="logo.png" alt="NyaX Logo">NyaXルール</h1>
+        <h1>
+            <svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 86.03314999999998 99.70458000000002"><g><g fill="currentColor" stroke="none"><path d="M 0.0,99.70458000000002 L 0.0,29.566630000000004 L 17.474879999999985,29.563980000000015 L 17.495619999999974,69.20895000000002 L 32.41914999999997,49.85291000000001 L 17.468049999999977,29.566630000000004 L 9.999999974752427e-06,29.566630000000004 L 9.999999974752427e-06,0.0 L 18.561259999999976,0.0 L 43.434229999999985,33.70192 L 68.40213999999997,0.0 L 86.03314999999998,0.0 L 86.03314999999998,29.648570000000007 L 68.84990999999997,29.648570000000007 L 53.67573999999996,49.55009000000001 L 68.90521999999999,70.11661000000001 L 68.85379,29.569230000000005 L 86.03314,29.648570000000007 L 86.03314,99.70457999999999 L 68.55408,99.70457999999999 L 43.30136999999999,65.14823999999999 L 18.903069999999985,99.70457999999999 L 0.0,99.70458000000002"/></g></g></svg>
+            NyaXルール
+        </h1>
 
         <p class="intro">
             このルールは、NyaXを利用するすべてのユーザーが安全かつ快適に過ごせるように定められたものです。NyaXを利用することにより、あなたはこれらのルールに同意したものとみなされます。

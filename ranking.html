@@ -8,53 +8,215 @@
     <link rel="icon" href="favicon.png" type="image/png">
     
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
+    <link rel="stylesheet" href="root.css">
     <style>
-        :root { --primary-color: #1d9bf0; --border-color: #eff3f4; --text-color: #0f1419; --secondary-text-color: #536471; --bg-color: #f7f9f9; --gold-color: #FFD700; --silver-color: #C0C0C0; --bronze-color: #CD7F32; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding: 1rem; margin: 0; background-color: var(--bg-color); color: var(--text-color); }
-        .container { max-width: fit-content; margin: 0 auto; background-color: white; border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; }
-        header { padding: 1.5rem; text-align: center; border-bottom: 1px solid var(--border-color); }
-        header h1 { margin: 0; font-size: 1.5rem; }
-        .rank-tabs { display: flex; border-bottom: 1px solid var(--border-color); }
-        .rank-tab-button { flex-grow: 1; padding: 1rem; border: none; background: none; font-size: 1rem; cursor: pointer; color: var(--secondary-text-color); font-weight: 500; position: relative; }
-        .rank-tab-button:hover { background-color: var(--bg-color); }
-        .rank-tab-button.active { color: var(--text-color); font-weight: 700; }
-        .rank-tab-button.active::after { content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 4px; background-color: var(--primary-color); border-radius: 9999px; }
-        main { padding: 1rem; min-height: 400px; }
-        h2 { font-size: 1.2rem; margin-top: 0; }
-        .rank-list { list-style: none; padding: 0; margin: 0; }
-        .rank-item { display: flex; align-items: center; padding: 0.75rem 0.5rem; border-bottom: 1px solid var(--border-color); }
-        .rank-item:last-child { border-bottom: none; }
-        .rank-number { font-weight: bold; font-size: 1.2rem; width: 2.5em; text-align: center; color: var(--secondary-text-color); }
-        .rank-number.gold { color: var(--gold-color); }
-        .rank-number.silver { color: var(--silver-color); }
-        .rank-number.bronze { color: var(--bronze-color); }
-        .user-icon { width: 48px; height: 48px; border-radius: 50%; margin: 0 1rem; }
-        .user-info { flex-grow: 1; min-width: 0; }
-        .user-name { font-weight: bold; display: flex; align-items: center; gap: 0.3em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .user-name a { color: inherit; text-decoration: none; }
-        .user-name a:hover { text-decoration: underline; }
-        .user-badge { width: 1.2em; height: 1.2em; }
-        .score { color: var(--secondary-text-color); font-size: 0.9rem; }
-        #my-ranks-section { background-color: #e8f5fd; padding: 1.5rem; border-bottom: 1px solid var(--border-color); display: none; }
-        #my-ranks-section h2 { margin-top: 0; }
-        .my-ranks-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        .my-rank-item span { display: block; }
-        .my-rank-item .rank-label { font-size: 0.9rem; color: var(--secondary-text-color); }
-        .my-rank-item .rank-value { font-size: 1.2rem; font-weight: bold; }
-        .spinner-container { display: flex; justify-content: center; align-items: center; height: 100px; }
-        .spinner { border: 4px solid rgba(0,0,0,0.1); width: 36px; height: 36px; border-radius: 50%; border-left-color: var(--primary-color); animation: spin 1s ease infinite; }
-        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        :root {
+            /*--primary-color: #1d9bf0;
+            --border-color: #eff3f4;
+            --text-color: #0f1419;
+            --secondary-text-color: #536471;
+            --bg-color: #f7f9f9;*/
+            --gold-color: #FFD700;
+            --silver-color: #C0C0C0;
+            --bronze-color: #CD7F32;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            padding: 1rem;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        .container {
+            max-width: fit-content;
+            margin: 0 auto;
+            background-color: var(--ad-bg-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        header {
+            padding: 1.5rem;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+        .rank-tabs {
+            display: flex;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .rank-tab-button {
+            flex-grow: 1;
+            padding: 1rem;
+            border: none;
+            background: none;
+            font-size: 1rem;
+            cursor: pointer;
+            color: var(--secondary-text-color);
+            font-weight: 500;
+            position: relative;
+        }
+        .rank-tab-button:hover {
+            background-color: var(--bg-color);
+        }
+        .rank-tab-button.active {
+            color: var(--text-color);
+            font-weight: 700;
+        }
+        .rank-tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 9999px;
+        }
+        main {
+            padding: 1rem;
+            min-height: 400px;
+        }
+        h2 {
+            font-size: 1.2rem;
+            margin-top: 0;
+        }
+        .rank-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .rank-item {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0.5rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .rank-item:last-child {
+            border-bottom: none;
+        }
+        .rank-number {
+            font-weight: bold;
+            font-size: 1.2rem;
+            width: 2.5em;
+            text-align: center;
+            color: var(--secondary-text-color);
+        }
+        .rank-number.gold {
+            color: var(--gold-color);
+        }
+        .rank-number.silver {
+            color: var(--silver-color);
+        }
+        .rank-number.bronze {
+            color: var(--bronze-color);
+        }
+        .user-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            margin: 0 1rem;
+        }
+        .user-info {
+            flex-grow: 1;
+            min-width: 0;
+        }
+        .user-name {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.3em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .user-name a {
+            color: inherit;
+            text-decoration: none; 
+        }
+        .user-name a:hover {
+            text-decoration: underline;
+        }
+        .user-badge {
+            width: 1.2em;
+            height: 1.2em;
+        }
+        .score {
+            color: var(--secondary-text-color);
+            font-size: 0.9rem;
+        }
+        #my-ranks-section {
+            background-color: #e8f5fd;
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            display: none;
+        }
+        #my-ranks-section h2 {
+            margin-top: 0;
+        }
+        .my-ranks-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .my-rank-item span {
+            display: block;
+        }
+        .my-rank-item .rank-label {
+            font-size: 0.9rem;
+            color: var(--secondary-text-color);
+        }
+        .my-rank-item .rank-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+        .spinner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+        .spinner {
+            border: 4px solid rgba(0,0,0,0.1);
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border-left-color: var(--primary-color);
+            animation: spin 1s ease infinite;
+        }
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const ld = localStorage.getItem("ld");
+            if (ld !== null) {
+                if (ld == "d"){
+                    document.body.classList.add("dark");
+                    document.body.classList.remove("light");
+                }
+            }
+        });
+    </script>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYBQTQ1HCX"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-  gtag('config', 'G-JYBQTQ1HCX');
+    gtag('config', 'G-JYBQTQ1HCX');
 </script>
 <body>
     <div class="container">
@@ -96,7 +258,7 @@
                 const { data } = supabase.storage.from('nyax').getPublicUrl(user.icon_data);
                 return data.publicUrl;
             }
-            return `https://trampoline.turbowarp.org/avatars/by-username/${user.scid}`;
+            return `/emoji/neko.svg`;
         }
         
         const rankContent = document.getElementById('rank-content');

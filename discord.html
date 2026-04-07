@@ -8,14 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow, noarchive">
     <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="root.css">
     <link rel="stylesheet" href="subpage.css">
     <title>NyaX - Redirect</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const ld = localStorage.getItem("ld");
+          if (ld !== null) {
+            if (ld == "d"){
+              document.body.classList.add("dark");
+              document.body.classList.remove("light");
+          }
+        }
+      });
+    </script>
+    <style>
+      .logo{
+        fill: var(--logo-color) !important;
+  	    stroke: var(--logo-color) !important;
+      }
+    </style>
   </head>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-JYBQTQ1HCX"></script>
   <body>
     <div class="container">
-      <h1><img src="logo.png" alt="NyaX Logo">Link Redirect</h1>
+      <h1>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,86.03313,99.70458" class="logo"><g transform="translate(-196.60558,-130.32065)"><g><path d="M196.60559,230.02523l0,-70.13795l17.47488,-0.00265l0.02074,39.64497l14.92353,-19.35604l-14.9511,-20.28628l-17.46804,0v-29.56663h18.56125l24.87297,33.70192l24.96791,-33.70192h17.63101l0,29.64857l-17.18324,0l-15.17417,19.90152l15.22948,20.56652l-0.05143,-40.54738l17.17935,0.07934l0,70.05601h-17.47906l-25.25271,-34.55634l-24.3983,34.55634z"/></g></g></svg>
+        Link Redirect
+      </h1>
       <p>1秒後, NyaX公式Discord鯖 にリダイレクトします。</p>
       <a href="https://discord.gg/bYkheTzU5n">リダイレクトしない場合はこのリンクをクリックしてください。</a>
     </div>

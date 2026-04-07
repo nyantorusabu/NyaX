@@ -1,3 +1,4 @@
+
 window.addEventListener('DOMContentLoaded', () => {
 	// --- 1. 初期設定 & グローバル変数 ---
 	const SUPABASE_URL = 'https://mnvdpvsivqqbzbtjtpws.supabase.co';
@@ -595,26 +596,31 @@ window.addEventListener('DOMContentLoaded', () => {
 			if (currentUser.settings?.theme == 'dark') {
 				document.body.classList.remove('light');
 				document.body.classList.add('dark');
+				localStorage.setItem("ld", "d");
 				emoji_picker_theme = 'dark';
 			} else if (currentUser.settings?.theme == 'auto') {
 				if (isDarkmode) {
 					document.body.classList.remove('light');
 					document.body.classList.add('dark');
 					emoji_picker_theme = 'dark';
+					localStorage.setItem("ld", "d");
 				} else {
 					document.body.classList.add('light');
 					document.body.classList.remove('dark');
 					emoji_picker_theme = 'light';
+					localStorage.setItem("ld", "l");
 				}
 			} else {
 				document.body.classList.add('light');
 				document.body.classList.remove('dark');
 				emoji_picker_theme = 'light';
+				localStorage.setItem("ld", "l");
 			}
 		} else {
 			document.body.classList.add('light');
 			document.body.classList.remove('dark');
 			emoji_picker_theme = 'light';
+			localStorage.setItem("ld", "l");
 		}
 
 		if (currentDmChannel) supabase.removeChannel(currentDmChannel);
@@ -820,8 +826,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				} else {
 					isActive = hash.startsWith(item.hash);
 				}
-				return `
-                <a href="${item.hash}" class="nav-item ${isActive ? 'active' : ''}">
+				return `<a href="${item.hash}" class="nav-item ${isActive ? 'active' : ''}">
                     <div class="nav-item-icon-container">
                         ${item.icon}
                         ${item.badge && item.badge > 0 ? `<span class="notification-badge">${item.badge > 99 ? '99+' : item.badge}</span>` : ''}
